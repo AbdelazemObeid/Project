@@ -1,8 +1,8 @@
 [
     {
         "id": "m1",
-        "name": "Slim Fit Blazer",
-        "image": "img/product/product-2.jpg",
+        "name": "Slim Fit Navy Blazer",
+        "image": "img/men/m1.png",
         "price": 89.0,
         "rating": 5,
         "label": "new",
@@ -10,8 +10,8 @@
     },
     {
         "id": "m2",
-        "name": "Classic Denim Jacket",
-        "image": "img/product/product-4.jpg",
+        "name": "Classic Blue Denim Jacket",
+        "image": "img/men/m2.png",
         "price": 75.0,
         "rating": 5,
         "label": null,
@@ -19,8 +19,8 @@
     },
     {
         "id": "m3",
-        "name": "Oxford Button-Down Shirt",
-        "image": "img/product/product-5.jpg",
+        "name": "Light Blue Oxford Shirt",
+        "image": "img/men/m3.png",
         "price": 45.0,
         "rating": 5,
         "label": null,
@@ -28,8 +28,8 @@
     },
     {
         "id": "m4",
-        "name": "Leather Crossbody Bag",
-        "image": "img/product/product-8.jpg",
+        "name": "Brown Leather Crossbody Bag",
+        "image": "img/men/m4.png",
         "price": 65.0,
         "rating": 5,
         "label": null,
@@ -37,8 +37,8 @@
     },
     {
         "id": "m5",
-        "name": "Casual Chino Trousers",
-        "image": "img/product/product-6.jpg",
+        "name": "Khaki Casual Chino Trousers",
+        "image": "img/men/m5.png",
         "price": 39.0,
         "oldPrice": 55.0,
         "rating": 5,
@@ -47,8 +47,8 @@
     },
     {
         "id": "m6",
-        "name": "Aviator Sunglasses",
-        "image": "img/product/product-7.jpg",
+        "name": "Navy Blazer Variant",
+        "image": "img/men/m6.png",
         "price": 59.0,
         "rating": 5,
         "label": null,
@@ -56,8 +56,8 @@
     },
     {
         "id": "m7",
-        "name": "Premium Cotton T-Shirt",
-        "image": "img/product/product-3.jpg",
+        "name": "Premium Denim Jacket",
+        "image": "img/men/m7.png",
         "price": 35.0,
         "rating": 5,
         "label": "out of stock",
@@ -65,8 +65,8 @@
     },
     {
         "id": "m8",
-        "name": "Wool Overcoat",
-        "image": "img/product/product-1.jpg",
+        "name": "Striped Oxford Shirt",
+        "image": "img/men/m8.png",
         "price": 120.0,
         "rating": 5,
         "label": null,
@@ -74,8 +74,8 @@
     },
     {
         "id": "m9",
-        "name": "Canvas Travel Backpack",
-        "image": "img/shop/shop-9.jpg",
+        "name": "Vintage Crossbody Bag",
+        "image": "img/men/m9.png",
         "price": 49.0,
         "oldPrice": 69.0,
         "rating": 5,
