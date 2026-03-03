@@ -1,4 +1,0 @@
-// transition (no prefixes needed for modern browsers)
-@mixin transition($args...) {
-    transition: $args;
-}
