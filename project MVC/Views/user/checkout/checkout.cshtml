@@ -1,0 +1,216 @@
+﻿@{
+    Layout = "~/Views/Shared/user/_userlayout.cshtml";
+}
+@section breadCrumb {
+    <div class="col-xl-6 col-lg-7">
+        <nav class="header__menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/women">Women's</a></li>
+                <li><a href="/men">Men's</a></li>
+                <li><a href="/kids">Kid's</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li class="active">
+                    <a href="#">Pages</a>
+                    <ul class="dropdown">
+                        <li><a href="/product_details">Product Details</a></li>
+                        <li><a href="/shop-cart">Shop Cart</a></li>
+                        <li><a href="/checkout">Checkout</a></li>
+                        <!-- <li><a href="./blog-details.html">Blog Details</a></li> -->
+                    </ul>
+                </li>
+                <!-- <li><a href="./blog.html">Blog</a></li> -->
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+}
+<!-- Breadcrumb Begin -->
+<div class="breadcrumb-option">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb__links">
+                    <a href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
+                    <span>Shopping cart</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+<!-- Checkout Section Begin -->
+<section class="checkout spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h6 class="coupon__link">
+                    <i class="fa fa-tag"></i>
+                    <a href="#">Have a coupon?</a> Click here to enter your code.
+                </h6>
+            </div>
+        </div>
+        <form action="#" class="checkout__form" id="checkout-form" novalidate>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h5 id="billing-heading">Billing Details</h5>
+                    <fieldset aria-labelledby="billing-heading">
+                        <div class="row">
+                            <!-- <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="checkout__form__input">
+                                        <label for="first-name">First Name <span aria-hidden="true">*</span></label>
+                                        <input type="text" id="first-name" name="firstName" required aria-required="true" autocomplete="given-name" minlength="2">
+                                        <span class="error-message" role="alert" aria-live="polite"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="checkout__form__input">
+                                        <label for="last-name">Last Name <span aria-hidden="true">*</span></label>
+                                        <input type="text" id="last-name" name="lastName" required aria-required="true" autocomplete="family-name" minlength="2">
+                                        <span class="error-message" role="alert" aria-live="polite"></span>
+                                    </div>
+                                </div> -->
+                            <div class="col-lg-12">
+                                <div class="checkout__form__input">
+                                    <label for="country">Country <span aria-hidden="true">*</span></label>
+                                    <select id="country" name="country" required aria-required="true" autocomplete="country-name">
+                                        <option value="">Select a country</option>
+                                        <option value="US">alqahera</option>
+                                        <option value="CA">alex</option>
+                                        <option value="GB">menofia</option>
+                                        <option value="AU">mansora</option>
+                                        <option value="DE">sharqia</option>
+                                        <option value="FR">giza</option>
+                                    </select>
+                                    <span class="error-message" role="alert" aria-live="polite"></span>
+                                </div>
+                                <div class="checkout__form__input">
+                                    <label for="city">Town/City <span aria-hidden="true">*</span></label>
+                                    <input type="text" id="city" name="city" required aria-required="true" autocomplete="address-level2">
+                                    <span class="error-message" role="alert" aria-live="polite"></span>
+                                </div>
+                                <div class="checkout__form__input">
+                                    <label for="address-street">Street Address <span aria-hidden="true">*</span></label>
+                                    <input type="text" id="address-street" name="addressStreet" required aria-required="true" autocomplete="address-line1" placeholder="Street Address">
+                                    <span class="error-message" role="alert" aria-live="polite"></span>
+                                </div>
+                                <!-- <div class="checkout__form__input">
+                                        <label for="address-apt">Apartment, suite, unit (optional)</label>
+                                        <input type="text" id="address-apt" name="addressApt" autocomplete="address-line2" placeholder="Apartment, suite, unit, etc.">
+                                    </div> -->
+                                <!-- <div class="checkout__form__input">
+                                        <label for="state">State/Province <span aria-hidden="true">*</span></label>
+                                        <input type="text" id="state" name="state" required aria-required="true" autocomplete="address-level1">
+                                        <span class="error-message" role="alert" aria-live="polite"></span>
+                                    </div> -->
+                                <!-- <div class="checkout__form__input">
+                                        <label for="postcode">Postcode/ZIP <span aria-hidden="true">*</span></label>
+                                        <input type="text" id="postcode" name="postcode" required aria-required="true" autocomplete="postal-code" pattern="[A-Za-z0-9\s\-]{3,10}">
+                                        <span class="error-message" role="alert" aria-live="polite"></span>
+                                    </div> -->
+                            </div>
+                            <!-- <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="checkout__form__input">
+                                        <label for="phone">Phone <span aria-hidden="true">*</span></label>
+                                        <input type="tel" id="phone" name="phone" required aria-required="true" autocomplete="tel" pattern="[\d\s\-\+\(\)]{7,20}">
+                                        <span class="error-message" role="alert" aria-live="polite"></span>
+                                    </div>
+                                </div> -->
+                            <!-- <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="checkout__form__input">
+                                        <label for="email">Email <span aria-hidden="true">*</span></label>
+                                        <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+                                        <span class="error-message" role="alert" aria-live="polite"></span>
+                                    </div>
+                                </div> -->
+                            <div class="col-lg-12">
+                                <!-- <div class="checkout__form__checkbox">
+                                        <label for="create-account">
+                                            Create an account?
+                                            <input type="checkbox" id="create-account" name="createAccount" aria-controls="account-password-group">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p class="form-help-text">Create an account by entering the information below. If you are a returning customer, please login at the top of the page.</p>
+                                    </div> -->
+                                <div class="checkout__form__input" id="account-password-group" hidden>
+                                    <label for="account-password">Account Password <span aria-hidden="true">*</span></label>
+                                    <input type="password" id="account-password" name="accountPassword" autocomplete="new-password" minlength="8" aria-describedby="password-requirements">
+                                    <span id="password-requirements" class="form-help-text">Minimum 8 characters</span>
+                                    <span class="error-message" role="alert" aria-live="polite"></span>
+                                </div>
+                                <div class="checkout__form__checkbox">
+                                    <label for="add-order-note">
+                                        Add a note to your order
+                                        <input type="checkbox" id="add-order-note" name="addOrderNote" aria-controls="order-notes-group">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="checkout__form__input" id="order-notes-group" hidden>
+                                    <label for="order-notes">Order Notes</label>
+                                    <textarea id="order-notes" name="orderNotes" rows="4" placeholder="Notes about your order, e.g., special instructions for delivery"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col-lg-4">
+                    <div class="checkout__order">
+                        <h5>Your order</h5>
+                        <div class="checkout__order__product">
+                            <ul>
+                                <li>
+                                    <span class="top__text">Product</span>
+                                    <span class="top__text__right">Total</span>
+                                </li>
+                                <li>01. Chain buck bag <span>$ 300.0</span></li>
+                                <li>02. Zip-pockets pebbled<br /> tote briefcase <span>$ 170.0</span></li>
+                                <li>03. Black jean <span>$ 170.0</span></li>
+                                <li>04. Cotton shirt <span>$ 110.0</span></li>
+                            </ul>
+                        </div>
+                        <div class="checkout__order__total">
+                            <ul>
+                                <!-- <li>Subtotal <span>$ 750.0</span></li> -->
+                                <li>Total <span>$ 750.0</span></li>
+                            </ul>
+                        </div>
+                        <fieldset class="checkout__order__widget" role="radiogroup" aria-labelledby="payment-method-label">
+                            <legend id="payment-method-label" class="visually-hidden">Select Payment Method</legend>
+                            <p class="payment-label">Payment Method <span aria-hidden="true">*</span></p>
+                            <label for="credit-card" class="payment-option">
+                                <input type="radio" id="credit-card" name="paymentMethod" value="credit-card" required aria-required="true" checked>
+                                <span class="radio-mark"></span>
+                                Credit Card
+                            </label>
+                            <label for="check-payment" class="payment-option">
+                                <input type="radio" id="check-payment" name="paymentMethod" value="cheque">
+                                <span class="radio-mark"></span>
+                                Cheque Payment
+                            </label>
+                            <label for="paypal" class="payment-option">
+                                <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                                <span class="radio-mark"></span>
+                                PayPal
+                            </label>
+                            <label for="bank-transfer" class="payment-option">
+                                <input type="radio" id="bank-transfer" name="paymentMethod" value="bank-transfer">
+                                <span class="radio-mark"></span>
+                                Bank Transfer
+                            </label>
+                        </fieldset>
+                        <div class="checkout__form__checkbox">
+                            <label for="terms-agree">
+                                <input type="checkbox" id="terms-agree" name="termsAgree" required aria-required="true">
+                                <span class="checkmark"></span>
+                                I have read and agree to the <a href="#" target="_blank">terms and conditions</a> <span aria-hidden="true">*</span>
+                            </label>
+                            <span class="error-message" role="alert" aria-live="polite"></span>
+                        </div>
+                        <button type="submit" class="site-btn">Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- Checkout Section End -->

@@ -1,0 +1,451 @@
+﻿@{
+    Layout = "~/Views/Shared/user/_userlayout.cshtml";
+}
+@section breadCrumb {
+    <div class="col-xl-6 col-lg-7">
+        <nav class="header__menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/women">Women's</a></li>
+                <li><a href="/men">Men's</a></li>
+                <li><a href="/kids">Kid's</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li class="active">
+                    <a href="#">Pages</a>
+                    <ul class="dropdown">
+                        <li><a href="/product_details">Product Details</a></li>
+                        <li><a href="/shop-cart">Shop Cart</a></li>
+                        <li><a href="/checkout">Checkout</a></li>
+                        <!-- <li><a href="./blog-details.html">Blog Details</a></li> -->
+                    </ul>
+                </li>
+                <!-- <li><a href="./blog.html">Blog</a></li> -->
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+}
+<!-- Breadcrumb Begin -->
+<div class="breadcrumb-option">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb__links">
+                    <a href="/"><i class="fa-solid fa-house"></i> Home</a>
+                    <a href="/women">Women’s </a>
+                    <span>Essential structured blazer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+<!-- Product Details Section Begin -->
+<section class="product-details spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="product__details__pic">
+                    <div class="product__details__pic__left product__thumb nice-scroll">
+                        <a class="pt active" href="#product-1">
+                            <img src="img/product/details/thumb-1.jpg" alt="" loading="lazy" decoding="async">
+                        </a>
+                        <a class="pt" href="#product-2">
+                            <img src="img/product/details/thumb-2.jpg" alt="" loading="lazy" decoding="async">
+                        </a>
+                        <a class="pt" href="#product-3">
+                            <img src="img/product/details/thumb-3.jpg" alt="" loading="lazy" decoding="async">
+                        </a>
+                        <a class="pt" href="#product-4">
+                            <img src="img/product/details/thumb-4.jpg" alt="" loading="lazy" decoding="async">
+                        </a>
+                    </div>
+                    <div class="product__details__slider__content">
+                        <div class="product__details__pic__slider">
+                            <button class="nav-prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+                            <div class="product__details__pic__item active" data-hash="product-1">
+                                <picture>
+                                    <source srcset="img/product/details/product-1.jpg.webp" type="image/webp">
+                                    <img class="product__big__img" src="img/product/details/product-1.jpg" alt="Product image 1" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="product__details__pic__item" data-hash="product-2">
+                                <picture>
+                                    <source srcset="img/product/details/product-3.jpg.webp" type="image/webp">
+                                    <img class="product__big__img" src="img/product/details/product-3.jpg" alt="Product image 2" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="product__details__pic__item" data-hash="product-3">
+                                <picture>
+                                    <source srcset="img/product/details/product-2.jpg.webp" type="image/webp">
+                                    <img class="product__big__img" src="img/product/details/product-2.jpg" alt="Product image 3" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="product__details__pic__item" data-hash="product-4">
+                                <picture>
+                                    <source srcset="img/product/details/product-4.jpg.webp" type="image/webp">
+                                    <img class="product__big__img" src="img/product/details/product-4.jpg" alt="Product image 4" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <button class="nav-next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="product__details__text">
+                    <h3>Essential structured blazer <span>Brand: SKMEIMore Men Watches from SKMEI</span></h3>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>( 138 reviews )</span>
+                    </div>
+                    <div class="product__details__price">$ 75.0 <span>$ 83.0</span></div>
+                    <p>
+                        Nemo enim ipsam voluptatem quia aspernatur aut odit aut loret fugit, sed quia consequuntur
+                        magni lores eos qui ratione voluptatem sequi nesciunt.
+                    </p>
+                    <div class="product__details__button">
+                        <div class="quantity">
+                            <span>Quantity:</span>
+                            <div class="pro-qty">
+                                <input type="text" value="1">
+                            </div>
+                        </div>
+                        <a href="#" class="cart-btn">
+                            <i class="fa-solid fa-bag-shopping"></i> Add to cart
+                        </a>
+                        <ul class="product__btns">
+                            <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-sliders"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="product__details__widget">
+                        <ul>
+                            <li>
+                                <span>Availability:</span>
+                                <div class="stock__checkbox">
+                                    <label for="stockin">
+                                        In Stock
+                                        <input type="checkbox" id="stockin">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Available color:</span>
+                                <div class="color__checkbox">
+                                    <label for="red">
+                                        <input type="radio" name="color__radio" id="red" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label for="black">
+                                        <input type="radio" name="color__radio" id="black">
+                                        <span class="checkmark black-bg"></span>
+                                    </label>
+                                    <label for="grey">
+                                        <input type="radio" name="color__radio" id="grey">
+                                        <span class="checkmark grey-bg"></span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Available size:</span>
+                                <div class="size__btn">
+                                    <label for="xs-btn" class="active">
+                                        <input type="radio" id="xs-btn">
+                                        xs
+                                    </label>
+                                    <label for="s-btn">
+                                        <input type="radio" id="s-btn">
+                                        s
+                                    </label>
+                                    <label for="m-btn">
+                                        <input type="radio" id="m-btn">
+                                        m
+                                    </label>
+                                    <label for="l-btn">
+                                        <input type="radio" id="l-btn">
+                                        l
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Promotions:</span>
+                                <p>Free shipping</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="product__details__tab">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tabs-1" type="button" role="tab" aria-controls="tabs-1" aria-selected="true">Description</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabs-2" type="button" role="tab" aria-controls="tabs-2" aria-selected="false">Specification</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabs-3" type="button" role="tab" aria-controls="tabs-3" aria-selected="false">Reviews ( 2 )</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tabs-1" role="tabpanel" aria-labelledby="tabs-1-tab" tabindex="0">
+                            <h6>Product Description</h6>
+                            <p>Elevate your wardrobe with this Essential Structured Blazer, crafted from premium wool-blend fabric for a polished, professional look. The tailored silhouette features a single-button closure, notched lapels, and structured shoulders that create a sharp, flattering fit.</p>
+                            <p>Perfect for both office wear and smart-casual occasions, this versatile blazer pairs effortlessly with trousers, jeans, or a matching skirt. The fully lined interior ensures comfort throughout the day, while the two front flap pockets add functional elegance.</p>
+                            <h6>Key Features</h6>
+                            <ul>
+                                <li>Premium wool-blend fabric with subtle texture</li>
+                                <li>Tailored fit with structured shoulders</li>
+                                <li>Single-button front closure</li>
+                                <li>Notched lapels for a classic look</li>
+                                <li>Fully lined interior for smooth wearing</li>
+                                <li>Two front flap pockets</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="tabs-2" role="tabpanel" aria-labelledby="tabs-2-tab" tabindex="0">
+                            <h6>Product Specifications</h6>
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <th>Material</th>
+                                        <td>65% Wool, 30% Polyester, 5% Elastane</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Lining</th>
+                                        <td>100% Polyester</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Fit</th>
+                                        <td>Tailored / Slim Fit</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Closure</th>
+                                        <td>Single Button</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pockets</th>
+                                        <td>2 Front Flap Pockets, 1 Interior Pocket</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Care Instructions</th>
+                                        <td>Dry Clean Only</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Country of Origin</th>
+                                        <td>Italy</td>
+                                    </tr>
+                                    <tr>
+                                        <th>SKU</th>
+                                        <td>BLZ-ESS-2024-BLK</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="tabs-3" role="tabpanel" aria-labelledby="tabs-3-tab" tabindex="0">
+                            <h6>Customer Reviews</h6>
+                            <div class="review__item mb-4">
+                                <div class="d-flex align-items-start mb-2">
+                                    <div class="me-3">
+                                        <strong>Sarah M.</strong>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted">Verified Purchase - December 15, 2030</small>
+                                </div>
+                                <p>Absolutely love this blazer! The fit is perfect and the quality is outstanding. I've received so many compliments at work. The fabric feels luxurious and it's surprisingly comfortable for all-day wear. Highly recommend!</p>
+                            </div>
+                            <hr>
+                            <div class="review__item mb-4">
+                                <div class="d-flex align-items-start mb-2">
+                                    <div class="me-3">
+                                        <strong>Jennifer K.</strong>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted">Verified Purchase - November 28, 2030</small>
+                                </div>
+                                <p>Great blazer overall. The structured shoulders give it a very professional look. I sized down as suggested and it fits beautifully. Only giving 4 stars because I wish it came in more colors!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="related__title">
+                    <h5>RELATED PRODUCTS</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="img/shop/shop-1.jpg">
+                        <div class="label new">New</div>
+                        <ul class="product__hover">
+                            <li>
+                                <a href="./product-details.html">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product__item__text">
+                        <h6>
+                            <a href="./product-details.html">Closed Capicho Sweatshirt – Milton Fabric</a>
+                        </h6>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="product__price">699 EGP</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="img/shop/shop-111.jpg">
+                        <div class="label new">New</div>
+                        <ul class="product__hover">
+                            <!-- <li><a href="./product-details.html"><i class="fa-solid fa-eye"></i></a></li>
+                                        <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                        <li><a href="#"><span class="icon_bag_alt"></span></a></li> -->
+                            <li>
+                                <a href="./product-details.html">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product__item__text">
+                        <h6>
+                            <a href="./product-details.html">Closed Capicho Sweatshirt – Milton Fabric</a>
+                        </h6>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="product__price">699 EGP</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="img/shop/shop-11.jpg">
+                        <div class="label new">New</div>
+                        <ul class="product__hover">
+                            <!-- <li><a href="./product-details.html"><i class="fa-solid fa-eye"></i></a></li>
+                                        <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                        <li><a href="#"><span class="icon_bag_alt"></span></a></li> -->
+                            <li>
+                                <a href="./product-details.html">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product__item__text">
+                        <h6>
+                            <a href="./product-details.html">Closed Capicho Sweatshirt – Milton Fabric</a>
+                        </h6>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="product__price">699 EGP</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="img/shop/shop-2.jpg">
+                        <ul class="product__hover">
+                            <li>
+                                <a href="./product-details.html">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="./product-details.html">SWT/26706</a></h6>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="product__price">699 EGP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Product Details Section End -->

@@ -1,0 +1,89 @@
+﻿@model List<User>
+@{
+    Layout = "~/Views/Shared/admin/_adminlayout.cshtml";
+}
+<div class="sidebar">
+    <h2 class="logo"><i class="fa-solid fa-shield-halved"></i> Admin Panel</h2>
+    <a href="/admin"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+    <a href="/admin/products"><i class="fa-solid fa-box"></i> Products</a>
+    <a href="/admin/user" class="active"><i class="fa-solid fa-users"></i> Users</a>
+    <a href="/" id="log"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+</div>
+<div class="main">
+    @* @if (TempData["message"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show shadow-sm mt-3" role="alert" style="border-radius: 10px;">
+            <div class="d-flex align-items-center">
+                <i class="fa fa-check-circle me-2" style="font-size: 60px;text-align:center; background-color: #2563eb; color: white; border-radius: 20px; padding: 10px;"><strong>@TempData["message"]</strong></i>
+            </div>
+        </div>
+    } *@
+    @if (TempData["message"] != null)
+    {
+        @if (TempData["message"] != null)
+        {
+            <div class="custom-alert">
+                @TempData["message"]
+            </div>
+        }
+    }
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h1><i class="fa-solid fa-user-gear"></i> Users Management</h1>
+        <a href="/admin/user/add" class="btn">
+            <i class="fa-solid fa-user-plus"></i> Add New User
+        </a>
+    </div>
+
+    <div class="cards">
+        <div class="card card-active">
+            <div class="card-info">
+                <p>Active Now</p>
+                <h3>12</h3>
+            </div>
+            <i class="fa-solid fa-circle-check icon-bg" style="color: #4361ee;"></i>
+        </div>
+
+        <div class="card card-banned">
+            <div class="card-info">
+                <p>Banned</p>
+                <h3>2</h3>
+            </div>
+            <i class="fa-solid fa-user-slash icon-bg" style="color: #ef233c;"></i>
+        </div>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>
+                            <div class="user-info">
+                                <div class="user-avatar avatar-blue">A</div>
+                                <span class="user-name">@user.name</span>
+                            </div>
+                        </td>
+                        <td class="user-email">@user.email</td>
+                        <td><span class="role-badge">@user.role</span></td>
+                        <td>
+                            <div class="action-btns">
+                                <a href="/admin/user/view/@user.id" class="btn-icon btn-view" title="View"><i class="fa-solid fa-eye"></i></a>
+                                <a href="/admin/user/edit/@user.id" class="btn-icon btn-edit" title="Edit"><i class="fa-solid fa-user-pen"></i></a>
+                                <a href="/admin/user/delete/@user.id" class="btn-icon btn-delete" title="Delete"><i class="fa-solid fa-user-xmark"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

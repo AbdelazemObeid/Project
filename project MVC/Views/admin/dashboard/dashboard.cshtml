@@ -1,0 +1,71 @@
+﻿@{
+    Layout = "~/Views/Shared/admin/_adminlayout.cshtml";
+}
+<div class="sidebar">
+    <h2 class="logo"><i class="fa-solid fa-shield-halved"></i> Admin Panel</h2>
+    <a href="/admin" class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+    <a href="/admin/products"><i class="fa-solid fa-box"></i> Products</a>
+    <a href="/admin/user"><i class="fa-solid fa-users"></i> Users</a>
+    <a href="/" id="log"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+</div>
+
+<div class="main-content">
+    <header class="main-header">
+        <h1>Welcome Back, Admin!</h1>
+        <div class="date-display">
+            <i class="fa-regular fa-calendar"></i> April 12, 2026
+        </div>
+    </header>
+
+    <section class="stats-grid">
+        <div class="stat-card blue">
+            <div class="info">
+                <p>Total Sales</p>
+                <h3>$12,450</h3>
+            </div>
+            <i class="fa-solid fa-dollar-sign"></i>
+        </div>
+        <div class="stat-card green">
+            <div class="info">
+                <p>New Orders</p>
+                <h3>+45</h3>
+            </div>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <div class="stat-card orange">
+            <div class="info">
+                <p>Active Users</p>
+                <h3>1,205</h3>
+            </div>
+            <i class="fa-solid fa-user-check"></i>
+        </div>
+    </section>
+
+    <section class="details-grid-full">
+        <div class="content-box">
+            <h3 class="box-title">Recent Activities</h3>
+            <ul class="activity-list">
+                <li>
+                    <i class="fa-solid fa-circle-plus text-green"></i>
+                    <span>Added <b>New T-Shirt</b> to inventory</span>
+                    <span class="activity-time">2 mins ago</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-user-plus text-blue"></i>
+                    <span>New user <b>Ahmed Ali</b> registered</span>
+                    <span class="activity-time">1 hour ago</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-circle-exclamation text-red"></i>
+                    <span>Order <b>#4452</b> was cancelled</span>
+                    <span class="activity-time">3 hours ago</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-check-double text-green"></i>
+                    <span>Monthly sales report generated</span>
+                    <span class="activity-time">5 hours ago</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>

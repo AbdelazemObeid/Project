@@ -1,0 +1,102 @@
+﻿@model Product
+@{
+    Layout = "~/Views/Shared/admin/_adminlayout.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<div class="sidebar">
+    <h2 class="logo"><i class="fa-solid fa-shield-halved"></i> Admin Panel</h2>
+    <a href="/admin"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+    <a href="/admin/products" class="active"><i class="fa-solid fa-box"></i> Products</a>
+    <a href="/admin/user"><i class="fa-solid fa-users"></i> Users</a>
+    <a href="/" id="log"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+</div>
+<div class="main-content">
+    <header class="content-header">
+        <h1><i class="fa-solid fa-plus-circle"></i> Add New Product</h1>
+    </header>
+
+    <div class="form-wrapper">
+        <div class="form-card">
+            <h2 class="form-title">
+                <i class="fa-solid fa-cart-plus"></i> Product Details
+            </h2>
+
+            <form class="product-form" method="post">
+                <div class="input-group full-width">
+                    <i class="fa-solid fa-box icon"></i>
+                    <input type="text" placeholder="Product Name" name="name" value="@Model.name">
+                </div>
+                <div>
+                    <i class="fa-solid fa-user icon"></i>
+                    <input type="number" placeholder="YOUR ID" name="user_id" value="@Model.user_id">
+                </div>
+
+                <div class="grid-row">
+                    <div class="input-group">
+                        <i class="fa-solid fa-dollar-sign icon"></i>
+                        <input type="number" placeholder="Price" name="price" value="@Model.price">
+                    </div>
+                    <div class="input-group">
+                        <i class="fa-solid fa-boxes-packing icon"></i>
+                        <input type="number" placeholder="Quantity" name="quantity" value="@Model.quantity">
+                    </div>
+                </div>
+
+                <div class="grid-row">
+                    <div class="custom-input-group">
+                        <i class="fa-solid fa-list icon"></i>
+                        <select class="form-select custom-select" name="category_id">
+                            @foreach (var category in ViewBag.categories)
+                            {
+                                if (category.id == Model.category_id)
+                                {
+                                    <option value="@category.id" selected>@category.name</option>
+                                }
+                                else
+                                {
+                                    <option value="@category.id">@category.name</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                    <div class="custom-input-group">
+                        <i class="fa-solid fa-layer-group icon"></i>
+                        <select class="form-select custom-select" name="sup_category_id">
+                            @foreach (var category in ViewBag.sup_categories)
+                            {
+                                if (category.Id == Model.sup_category_id)
+                                {
+                                    <option value="@category.Id" selected>@category.Name</option>
+                                }
+                                else
+                                {
+                                    <option value="@category.Id">@category.Name</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid-row">
+                    <div class="input-group">
+                        <i class="fa-solid fa-palette icon"></i>
+                        <input type="text" placeholder="Color" name="color" value="@Model.color">
+                    </div>
+                    <div class="input-group">
+                        <i class="fa-solid fa-ruler-combined icon"></i>
+                        <input type="text" placeholder="Size" name="size" value="@Model.size">
+                    </div>
+                </div>
+
+                <div class="input-group full-width">
+                    <i class="fa-solid fa-rectangle-list icon"></i>
+                    <textarea placeholder="Description" rows="3" name="description"> @Model.description</textarea>
+                </div>
+
+                <button type="submit" class="btn-save">
+                    <i class="fa-solid fa-save"></i> Edit Product
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
