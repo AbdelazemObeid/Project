@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\depi\\project MVC\\project MVC\\project MVC.csproj": {}
+    "D:\\depi\\GET\\project MVC\\project MVC.csproj": {}
   },
   "projects": {
-    "D:\\depi\\project MVC\\project MVC\\project MVC.csproj": {
+    "D:\\depi\\GET\\project MVC\\project MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\depi\\project MVC\\project MVC\\project MVC.csproj",
+        "projectUniqueName": "D:\\depi\\GET\\project MVC\\project MVC.csproj",
         "projectName": "project MVC",
-        "projectPath": "D:\\depi\\project MVC\\project MVC\\project MVC.csproj",
+        "projectPath": "D:\\depi\\GET\\project MVC\\project MVC.csproj",
         "packagesPath": "C:\\Users\\FsiOoo\\.nuget\\packages\\",
-        "outputPath": "D:\\depi\\project MVC\\project MVC\\obj\\",
+        "outputPath": "D:\\depi\\GET\\project MVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

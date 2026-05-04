@@ -165,74 +165,74 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-D:\depi\project MVC\project MVC\wwwroot\css\site.css
-D:\depi\project MVC\project MVC\wwwroot\css\style_admin.css
-D:\depi\project MVC\project MVC\wwwroot\js\signup.js
-D:\depi\project MVC\project MVC\wwwroot\js\site.js
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.css
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.js
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
-D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
-D:\depi\project MVC\project MVC\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
-D:\depi\project MVC\project MVC\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
-D:\depi\project MVC\project MVC\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
-D:\depi\project MVC\project MVC\wwwroot\lib\jquery-validation\dist\additional-methods.js
-D:\depi\project MVC\project MVC\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
-D:\depi\project MVC\project MVC\wwwroot\lib\jquery-validation\dist\jquery.validate.js
-D:\depi\project MVC\project MVC\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
-D:\depi\project MVC\project MVC\wwwroot\lib\jquery-validation\LICENSE.md
-D:\depi\project MVC\project MVC\wwwroot\lib\jquery\dist\jquery.js
-D:\depi\project MVC\project MVC\wwwroot\lib\jquery\dist\jquery.min.js
-D:\depi\project MVC\project MVC\wwwroot\lib\jquery\dist\jquery.min.map
-D:\depi\project MVC\project MVC\wwwroot\lib\jquery\dist\jquery.slim.js
-D:\depi\project MVC\project MVC\wwwroot\lib\jquery\dist\jquery.slim.min.js
-D:\depi\project MVC\project MVC\wwwroot\lib\jquery\dist\jquery.slim.min.map
-D:\depi\project MVC\project MVC\wwwroot\css\admin-style.css
-D:\depi\project MVC\project MVC\wwwroot\css\elegant-icons.css
-D:\depi\project MVC\project MVC\wwwroot\css\style.css
-D:\depi\project MVC\project MVC\wwwroot\css\stylelogin.css
-D:\depi\project MVC\project MVC\wwwroot\lib\jquery\LICENSE.txt
-D:\depi\project MVC\project MVC\wwwroot\favicon.ico
-D:\depi\project MVC\project MVC\wwwroot\js\admin-main.js
-D:\depi\project MVC\project MVC\wwwroot\js\login.js
-D:\depi\project MVC\project MVC\wwwroot\js\main.js
+D:\depi\GET\project MVC\wwwroot\css\site.css
+D:\depi\GET\project MVC\wwwroot\css\style_admin.css
+D:\depi\GET\project MVC\wwwroot\js\signup.js
+D:\depi\GET\project MVC\wwwroot\js\site.js
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+D:\depi\GET\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+D:\depi\GET\project MVC\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+D:\depi\GET\project MVC\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+D:\depi\GET\project MVC\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+D:\depi\GET\project MVC\wwwroot\lib\jquery-validation\dist\additional-methods.js
+D:\depi\GET\project MVC\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+D:\depi\GET\project MVC\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+D:\depi\GET\project MVC\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+D:\depi\GET\project MVC\wwwroot\lib\jquery-validation\LICENSE.md
+D:\depi\GET\project MVC\wwwroot\lib\jquery\dist\jquery.js
+D:\depi\GET\project MVC\wwwroot\lib\jquery\dist\jquery.min.js
+D:\depi\GET\project MVC\wwwroot\lib\jquery\dist\jquery.min.map
+D:\depi\GET\project MVC\wwwroot\lib\jquery\dist\jquery.slim.js
+D:\depi\GET\project MVC\wwwroot\lib\jquery\dist\jquery.slim.min.js
+D:\depi\GET\project MVC\wwwroot\lib\jquery\dist\jquery.slim.min.map
+D:\depi\GET\project MVC\wwwroot\css\admin-style.css
+D:\depi\GET\project MVC\wwwroot\css\elegant-icons.css
+D:\depi\GET\project MVC\wwwroot\css\style.css
+D:\depi\GET\project MVC\wwwroot\css\stylelogin.css
+D:\depi\GET\project MVC\wwwroot\lib\jquery\LICENSE.txt
+D:\depi\GET\project MVC\wwwroot\favicon.ico
+D:\depi\GET\project MVC\wwwroot\js\admin-main.js
+D:\depi\GET\project MVC\wwwroot\js\login.js
+D:\depi\GET\project MVC\wwwroot\js\main.js

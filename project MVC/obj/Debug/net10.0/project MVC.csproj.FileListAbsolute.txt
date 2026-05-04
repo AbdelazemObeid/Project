@@ -690,3 +690,234 @@ C:\Users\3D STORE\OneDrive\Desktop\project MVC\project MVC\obj\Debug\net10.0\pro
 C:\Users\3D STORE\OneDrive\Desktop\project MVC\project MVC\obj\Debug\net10.0\project MVC.genruntimeconfig.cache
 C:\Users\3D STORE\OneDrive\Desktop\project MVC\project MVC\obj\Debug\net10.0\ref\project MVC.dll
 D:\depi\project MVC\project MVC\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+D:\depi\GET\project MVC\bin\Debug\net10.0\appsettings.Development.json
+D:\depi\GET\project MVC\bin\Debug\net10.0\appsettings.json
+D:\depi\GET\project MVC\bin\Debug\net10.0\project MVC.staticwebassets.runtime.json
+D:\depi\GET\project MVC\bin\Debug\net10.0\project MVC.staticwebassets.endpoints.json
+D:\depi\GET\project MVC\bin\Debug\net10.0\project MVC.exe
+D:\depi\GET\project MVC\bin\Debug\net10.0\project MVC.deps.json
+D:\depi\GET\project MVC\bin\Debug\net10.0\project MVC.runtimeconfig.json
+D:\depi\GET\project MVC\bin\Debug\net10.0\project MVC.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\project MVC.pdb
+D:\depi\GET\project MVC\bin\Debug\net10.0\Azure.Core.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Azure.Identity.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Humanizer.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.Build.Framework.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.Data.SqlClient.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.Identity.Client.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Mono.TextTemplating.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\Newtonsoft.Json.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\System.ClientModel.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\System.CodeDom.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\System.Composition.AttributedModel.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\System.Composition.Convention.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\System.Composition.Hosting.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\System.Composition.Runtime.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\System.Composition.TypedParts.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\System.Memory.Data.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\cs\Microsoft.Data.SqlClient.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\de\Microsoft.Data.SqlClient.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\es\Microsoft.Data.SqlClient.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\fr\Microsoft.Data.SqlClient.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\it\Microsoft.Data.SqlClient.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ja\Microsoft.Data.SqlClient.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ko\Microsoft.Data.SqlClient.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\pl\Microsoft.Data.SqlClient.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\ru\Microsoft.Data.SqlClient.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\tr\Microsoft.Data.SqlClient.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\depi\GET\project MVC\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\depi\GET\project MVC\obj\Debug\net10.0\project MVC.csproj.AssemblyReference.cache
+D:\depi\GET\project MVC\obj\Debug\net10.0\rpswa.dswa.cache.json
+D:\depi\GET\project MVC\obj\Debug\net10.0\project MVC.GeneratedMSBuildEditorConfig.editorconfig
+D:\depi\GET\project MVC\obj\Debug\net10.0\project MVC.AssemblyInfoInputs.cache
+D:\depi\GET\project MVC\obj\Debug\net10.0\project MVC.AssemblyInfo.cs
+D:\depi\GET\project MVC\obj\Debug\net10.0\project MVC.csproj.CoreCompileInputs.cache
+D:\depi\GET\project MVC\obj\Debug\net10.0\project MVC.MvcApplicationPartsAssemblyInfo.cache
+D:\depi\GET\project MVC\obj\Debug\net10.0\project MVC.RazorAssemblyInfo.cache
+D:\depi\GET\project MVC\obj\Debug\net10.0\project MVC.RazorAssemblyInfo.cs
+D:\depi\GET\project MVC\obj\Debug\net10.0\project MVC.sourcelink.json
+D:\depi\GET\project MVC\obj\Debug\net10.0\rjimswa.dswa.cache.json
+D:\depi\GET\project MVC\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+D:\depi\GET\project MVC\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+D:\depi\GET\project MVC\obj\Debug\net10.0\scopedcss\bundle\project MVC.styles.css
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\7g8zt43h1z-{0}-iz7kq53es7-iz7kq53es7.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\5lvu6kjws6-{0}-5ja87njm4p-5ja87njm4p.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\4klvqp0gde-{0}-b9sayid5wm-b9sayid5wm.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\slwmz8fvz5-{0}-cdyhprw4w6-cdyhprw4w6.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\oqjhut9ruj-{0}-1qybhh4uq0-1qybhh4uq0.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\qjbvpsf2jr-{0}-i3ocjem807-i3ocjem807.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\nfdx636od5-{0}-61n19gt1b8-61n19gt1b8.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\07vj7oliph-{0}-opbokcgvs5-opbokcgvs5.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\u79plelpeu-{0}-krxh1z9mpc-krxh1z9mpc.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\m3n75gii4h-{0}-91qr9bnive-91qr9bnive.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\q7qr5dc1n9-{0}-b7vppsdgbk-b7vppsdgbk.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\isr23ybsub-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\jki0myh99k-{0}-t1cqhe9u97-t1cqhe9u97.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\u9tz5mgnv3-{0}-c2jlpeoesf-c2jlpeoesf.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\whtijcde75-{0}-sejl45xvog-sejl45xvog.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\rkrf11jj6x-{0}-aexeepp0ev-aexeepp0ev.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\rw1wzc1l2w-{0}-xvp3kq03qx-xvp3kq03qx.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\b3ahgpllid-{0}-ausgxo2sd3-ausgxo2sd3.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\yk0bvgvblf-{0}-22vffe00uq-22vffe00uq.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\znhlcfcfpa-{0}-cosvhxvwiu-cosvhxvwiu.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\zagj0tf5ug-{0}-qesaa3a1fm-qesaa3a1fm.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\ft6xitnonh-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\d9ajnetkvu-{0}-tmc1g35s3z-tmc1g35s3z.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\z09zohpl1v-{0}-fsbi9cje9m-fsbi9cje9m.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\y4frig5sb1-{0}-rxsg74s51o-rxsg74s51o.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\gt66obmvh1-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\efjjdaap4s-{0}-q9ht133ko3-q9ht133ko3.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\vtovsgvacq-{0}-jd9uben2k1-jd9uben2k1.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\4uh3c19f55-{0}-gye83jo8yx-gye83jo8yx.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\30hxsfgcii-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\x0bk5icp9j-{0}-wl58j5mj3v-wl58j5mj3v.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\wvsv0rp07v-{0}-c2oey78nd0-c2oey78nd0.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\h1w260ivft-{0}-d4r6k3f320-d4r6k3f320.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\6kv69vt02l-{0}-j5mq2jizvt-j5mq2jizvt.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\qh4bl306xc-{0}-keugtjm085-keugtjm085.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\1ryr1rnudp-{0}-nvvlpmu67g-nvvlpmu67g.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\zyoga717xp-{0}-zub09dkrxp-zub09dkrxp.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\vb8oznbujf-{0}-pj5nd1wqec-pj5nd1wqec.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\w04162l4c5-{0}-43atpzeawx-43atpzeawx.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\6k45m4uhgc-{0}-v0zj4ognzu-v0zj4ognzu.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\g741cnr0d9-{0}-ynyaa8k90p-ynyaa8k90p.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\p6el0r5hlp-{0}-hrwsygsryq-hrwsygsryq.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\oy2pak5i3a-{0}-c63t5i9ira-c63t5i9ira.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\hc0chimquf-{0}-ft3s53vfgj-ft3s53vfgj.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\ixmh0oje56-{0}-4094rpi4f9-4094rpi4f9.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\136uvkrj14-{0}-6pdc2jztkx-6pdc2jztkx.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\w47bmp9mdf-{0}-hd3gran6i8-hd3gran6i8.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\n1bg76iqhb-{0}-iovd86k7lj-iovd86k7lj.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\g3daa9ytml-{0}-ltid2c489k-ltid2c489k.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\rtkghx3es0-{0}-kbrnm935zg-kbrnm935zg.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\boc8qt9o3q-{0}-8vyfqsqgz1-8vyfqsqgz1.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\fxl6ka3lb5-{0}-y7v9cxd14o-y7v9cxd14o.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\ctzefaana9-{0}-u9q1upor1n-u9q1upor1n.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\gk61wvnst0-{0}-h1s4sie4z3-h1s4sie4z3.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\d85ulq8v08-{0}-4d85u1mtcx-4d85u1mtcx.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\gax19xg7qv-{0}-0j3bgjxly4-0j3bgjxly4.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\ftjai9q04y-{0}-03hjc8e09r-03hjc8e09r.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\ndy9qdowjt-{0}-48y08845bh-48y08845bh.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\6vdqers9a5-{0}-356vix0kms-356vix0kms.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\54j66lfs23-{0}-83jwlth58m-83jwlth58m.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\92ahox96j2-{0}-mrlpezrjn3-mrlpezrjn3.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\pqyp8vdxa3-{0}-worgj0nhwm-worgj0nhwm.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\tui1c81h50-{0}-gk0pw8i4co-gk0pw8i4co.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\v3uglqwcrh-{0}-x0q3zqp4vz-x0q3zqp4vz.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\fyx2fzxose-{0}-d6nrnj6jjx-d6nrnj6jjx.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\h20qul0i4o-{0}-m9qm4tazc0-m9qm4tazc0.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\epxm6i3o50-{0}-ttgo8qnofa-ttgo8qnofa.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\7h57fbvqd4-{0}-jjsuc0puko-jjsuc0puko.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\l37q4kp7ta-{0}-9vr69e8ynj-9vr69e8ynj.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\1i1hmp169m-{0}-87fc7y1x7t-87fc7y1x7t.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\194c42bwh4-{0}-mlv21k5csn-mlv21k5csn.gz
+D:\depi\GET\project MVC\obj\Debug\net10.0\staticwebassets.build.json
+D:\depi\GET\project MVC\obj\Debug\net10.0\staticwebassets.build.json.cache
+D:\depi\GET\project MVC\obj\Debug\net10.0\staticwebassets.development.json
+D:\depi\GET\project MVC\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+D:\depi\GET\project MVC\obj\Debug\net10.0\swae.build.ex.cache
+D:\depi\GET\project MVC\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+D:\depi\GET\project MVC\obj\Debug\net10.0\project .653510E5.Up2Date
+D:\depi\GET\project MVC\obj\Debug\net10.0\project MVC.dll
+D:\depi\GET\project MVC\obj\Debug\net10.0\refint\project MVC.dll
+D:\depi\GET\project MVC\obj\Debug\net10.0\project MVC.pdb
+D:\depi\GET\project MVC\obj\Debug\net10.0\project MVC.genruntimeconfig.cache
+D:\depi\GET\project MVC\obj\Debug\net10.0\ref\project MVC.dll
