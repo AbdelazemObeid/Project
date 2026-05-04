@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using project_MVC.Models;
 
 namespace project_MVC.data.configuration
 {
-    public class cartconfiguration : IEntityTypeConfiguration<Cart>
+    public class CartConfiguration : IEntityTypeConfiguration<Cart>
     {
         public void Configure(EntityTypeBuilder<Cart> c)
         {

@@ -1,0 +1,62 @@
+@{
+    ViewData["Title"] = "Site Settings";
+    ViewData["ActivePage"] = "Settings";
+    Layout = "~/Views/Shared/admin/_adminlayout.cshtml";
+}
+
+<section id="section-settings" class="content-section active">
+    <div class="section-header">
+        <h1>Site Settings</h1>
+        <p>Configure your application preferences.</p>
+    </div>
+
+    <div class="settings-grid">
+        <!-- General Settings Card -->
+        <div class="card">
+            <div class="card-header">
+                <h2>General Settings</h2>
+            </div>
+            <div class="card-body">
+                <form id="settingsGeneralForm">
+                    <div class="form-group">
+                        <label>Site Name</label>
+                        <input type="text" id="siteName" class="form-control" value="My Awesome Site" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Site Description</label>
+                        <textarea id="siteDesc" class="form-control" rows="3">A modern blog built with HTML, CSS, and JS</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Admin Email</label>
+                        <input type="email" id="siteEmail" class="form-control" value="admin@example.com" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Appearance Card -->
+        <div class="card">
+            <div class="card-header">
+                <h2>Appearance</h2>
+            </div>
+            <div class="card-body">
+                <form id="settingsAppearanceForm">
+                    <div class="form-group">
+                        <label>Theme Color</label>
+                        <input type="color" id="themeColor" class="form-control" value="#294af1" style="height: 40px; padding: 2px;">
+                    </div>
+                    <div class="form-group">
+                        <label>Logo URL</label>
+                        <input type="text" id="logoUrl" class="form-control" value="https://..." placeholder="https://...">
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" id="darkModeToggle" checked>
+                        <label for="darkModeToggle">Enable Dark Mode Toggle</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Appearance</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

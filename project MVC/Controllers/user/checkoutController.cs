@@ -2,7 +2,7 @@
 
 namespace project_MVC.Controllers.user
 {
-    public class checkoutController : Controller
+    public class CheckoutController : Controller
     {
         [Route("/checkout")]
         public IActionResult Index()

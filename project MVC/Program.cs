@@ -16,15 +16,17 @@ namespace project_MVC
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
             app.UseRouting();
+
+            // ãåã ÌÏÇð ÚÔÇä wwwroot
+            app.UseStaticFiles();
 
             app.UseAuthorization();
 
-            app.MapStaticAssets();
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}")
-                .WithStaticAssets();
+                pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
         }

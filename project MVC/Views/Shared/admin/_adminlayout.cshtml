@@ -1,13 +1,92 @@
-﻿<!DOCTYPE html>
-<html lang="ar">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوحة التحكم | الرئيسية</title>
-    <link rel="stylesheet" href="~/css/style_admin.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>@ViewData["Title"] - Admin Dashboard</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/admin-style.css">
 </head>
-<body>
-    @RenderBody()
+
+<body class="dashboard-body">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-layer-group"></i>
+            <h2>AdminPanel</h2>
+        </div>
+        <div class="sidebar-nav">
+            <a href="/admin/dashboard" class="nav-item @(ViewData["ActivePage"]?.ToString() == "Dashboard" ? "active" : "")" style="text-decoration: none; color: inherit;">
+                <i class="fa-solid fa-desktop"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="/admin/products" class="nav-item @(ViewData["ActivePage"]?.ToString() == "Products" ? "active" : "")" style="text-decoration: none; color: inherit;">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span>Manage Products</span>
+            </a>
+            <a href="/admin/users" class="nav-item @(ViewData["ActivePage"]?.ToString() == "Users" ? "active" : "")" style="text-decoration: none; color: inherit;">
+                <i class="fa-solid fa-user-group"></i>
+                <span>Manage Users</span>
+            </a>
+
+            <a href="/admin/statistics" class="nav-item @(ViewData["ActivePage"]?.ToString() == "Statistics" ? "active" : "")" style="text-decoration: none; color: inherit;">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>View Statistics</span>
+            </a>
+        </div>
+        <div class="sidebar-footer mt-auto" style="margin-top:auto">
+            <a href="/admin" class="logout-btn">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <!-- Top Navbar -->
+        <header class="top-nav">
+            <button class="toggle-sidebar" id="toggleSidebar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+
+            <div class="header-right">
+                <div class="notification-bell">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="badge-dot"></span>
+                </div>
+                <div class="user-profile">
+                    <div class="avatar">
+                        <div class="avatar-circle">AU</div>
+                        <div class="user-info">
+                            <span class="name">Admin User</span>
+                            <span class="role">Superadmin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <!-- Sections -->
+    <div class="content-wrapper">
+        @RenderBody()
+    </div>
+</main>
+
+    <!-- Custom JS -->
+    <script src="/js/admin-main.js"></script>
+    
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

@@ -1,0 +1,238 @@
+wwwroot\css\admin-style.css
+wwwroot\css\elegant-icons.css
+wwwroot\css\site.css
+wwwroot\css\style.css
+wwwroot\css\stylelogin.css
+wwwroot\css\style_admin.css
+wwwroot\favicon.ico
+wwwroot\img\banner\banner-1.jpg.webp
+wwwroot\img\banner\banner-2.jpg.webp
+wwwroot\img\banner\banner-3.jpg.webp
+wwwroot\img\banner\banner-4.jpg.webp
+wwwroot\img\blog\blog-1.jpg.webp
+wwwroot\img\blog\blog-10.jpg.webp
+wwwroot\img\blog\blog-2.jpg.webp
+wwwroot\img\blog\blog-3.jpg.webp
+wwwroot\img\blog\blog-4.jpg.webp
+wwwroot\img\blog\blog-5.jpg.webp
+wwwroot\img\blog\blog-6.jpg.webp
+wwwroot\img\blog\blog-7.jpg.webp
+wwwroot\img\blog\blog-8.jpg.webp
+wwwroot\img\blog\blog-9.jpg.webp
+wwwroot\img\blog\details\blog-details.jpg.webp
+wwwroot\img\blog\details\comment-1.jpg.webp
+wwwroot\img\blog\details\comment-2.jpg.webp
+wwwroot\img\blog\details\comment-3.jpg.webp
+wwwroot\img\blog\sidebar\fp-1.jpg.webp
+wwwroot\img\blog\sidebar\fp-2.jpg.webp
+wwwroot\img\blog\sidebar\fp-3.jpg.webp
+wwwroot\img\categories\category-1.jpg.webp
+wwwroot\img\categories\category-2.jpg.webp
+wwwroot\img\categories\category-3.jpg.webp
+wwwroot\img\categories\category-4.jpg.webp
+wwwroot\img\categories\category-5.jpg.webp
+wwwroot\img\categories\category-6.jpg.webp
+wwwroot\img\discount.jpg.webp
+wwwroot\img\instagram\insta-1.jpg.webp
+wwwroot\img\instagram\insta-2.jpg.webp
+wwwroot\img\instagram\insta-3.jpg.webp
+wwwroot\img\instagram\insta-4.jpg.webp
+wwwroot\img\instagram\insta-5.jpg.webp
+wwwroot\img\instagram\insta-6.jpg.webp
+wwwroot\img\logo.png.webp
+wwwroot\img\product\details\product-1.jpg.webp
+wwwroot\img\product\details\product-2.jpg.webp
+wwwroot\img\product\details\product-3.jpg.webp
+wwwroot\img\product\details\product-4.jpg.webp
+wwwroot\img\product\details\thumb-1.jpg.webp
+wwwroot\img\product\details\thumb-2.jpg.webp
+wwwroot\img\product\details\thumb-3.jpg.webp
+wwwroot\img\product\details\thumb-4.jpg.webp
+wwwroot\img\product\product-1.jpg.webp
+wwwroot\img\product\product-2.jpg.webp
+wwwroot\img\product\product-3.jpg.webp
+wwwroot\img\product\product-4.jpg.webp
+wwwroot\img\product\product-5.jpg.webp
+wwwroot\img\product\product-6.jpg.webp
+wwwroot\img\product\product-7.jpg.webp
+wwwroot\img\product\product-8.jpg.webp
+wwwroot\img\product\related\rp-1.jpg.webp
+wwwroot\img\product\related\rp-2.jpg.webp
+wwwroot\img\product\related\rp-3.jpg.webp
+wwwroot\img\product\related\rp-4.jpg.webp
+wwwroot\img\shop-cart\cp-1.jpg.webp
+wwwroot\img\shop-cart\cp-2.jpg.webp
+wwwroot\img\shop-cart\cp-3.jpg.webp
+wwwroot\img\shop-cart\cp-4.jpg.webp
+wwwroot\img\shop\shop-1.jpg.webp
+wwwroot\img\shop\shop-11.jpg.webp
+wwwroot\img\shop\shop-111.jpg.webp
+wwwroot\img\shop\shop-2.jpg.webp
+wwwroot\img\shop\shop-22.jpg.webp
+wwwroot\img\shop\shop-222.jpg.webp
+wwwroot\img\shop\shop-3.jpg.webp
+wwwroot\img\shop\shop-33.jpg.webp
+wwwroot\img\shop\shop-333.jpg.webp
+wwwroot\img\shop\shop-4.jpg.webp
+wwwroot\img\shop\shop-44.jpg.webp
+wwwroot\img\shop\shop-444.jpg.webp
+wwwroot\img\shop\shop-5.jpg.webp
+wwwroot\img\shop\shop-55.jpg.webp
+wwwroot\img\shop\shop-555.jpg.webp
+wwwroot\img\shop\shop-6.jpg.webp
+wwwroot\img\shop\shop-66.jpg.webp
+wwwroot\img\shop\shop-666.jpg.webp
+wwwroot\img\shop\shop-7.jpg.webp
+wwwroot\img\shop\shop-77.jpg.webp
+wwwroot\img\shop\shop-777.jpg.webp
+wwwroot\img\shop\shop-8.jpg.webp
+wwwroot\img\shop\shop-88.jpg.webp
+wwwroot\img\shop\shop-888.jpg.webp
+wwwroot\img\shop\shop-9.jpg.webp
+wwwroot\img\shop\shop-99.jpg.webp
+wwwroot\img\shop\shop-999.jpg.webp
+wwwroot\img\trend\bs-1.jpg.webp
+wwwroot\img\trend\bs-2.jpg.webp
+wwwroot\img\trend\bs-3.jpg.webp
+wwwroot\img\trend\f-1.jpg.webp
+wwwroot\img\trend\f-2.jpg.webp
+wwwroot\img\trend\f-3.jpg.webp
+wwwroot\img\trend\ht-1.jpg.webp
+wwwroot\img\trend\ht-2.jpg.webp
+wwwroot\img\trend\ht-3.jpg.webp
+wwwroot\js\admin-main.js
+wwwroot\js\login.js
+wwwroot\js\main.js
+wwwroot\js\signup.js
+wwwroot\js\site.js
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+wwwroot\lib\bootstrap\LICENSE
+wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\lib\jquery-validation\dist\additional-methods.js
+wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+wwwroot\lib\jquery-validation\LICENSE.md
+wwwroot\lib\jquery\dist\jquery.js
+wwwroot\lib\jquery\dist\jquery.min.js
+wwwroot\lib\jquery\dist\jquery.min.map
+wwwroot\lib\jquery\dist\jquery.slim.js
+wwwroot\lib\jquery\dist\jquery.slim.min.js
+wwwroot\lib\jquery\dist\jquery.slim.min.map
+wwwroot\lib\jquery\LICENSE.txt
+D:\depi\project MVC\project MVC\wwwroot\css\site.css
+D:\depi\project MVC\project MVC\wwwroot\css\style_admin.css
+D:\depi\project MVC\project MVC\wwwroot\js\signup.js
+D:\depi\project MVC\project MVC\wwwroot\js\site.js
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+D:\depi\project MVC\project MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+D:\depi\project MVC\project MVC\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+D:\depi\project MVC\project MVC\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+D:\depi\project MVC\project MVC\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+D:\depi\project MVC\project MVC\wwwroot\lib\jquery-validation\dist\additional-methods.js
+D:\depi\project MVC\project MVC\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+D:\depi\project MVC\project MVC\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+D:\depi\project MVC\project MVC\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+D:\depi\project MVC\project MVC\wwwroot\lib\jquery-validation\LICENSE.md
+D:\depi\project MVC\project MVC\wwwroot\lib\jquery\dist\jquery.js
+D:\depi\project MVC\project MVC\wwwroot\lib\jquery\dist\jquery.min.js
+D:\depi\project MVC\project MVC\wwwroot\lib\jquery\dist\jquery.min.map
+D:\depi\project MVC\project MVC\wwwroot\lib\jquery\dist\jquery.slim.js
+D:\depi\project MVC\project MVC\wwwroot\lib\jquery\dist\jquery.slim.min.js
+D:\depi\project MVC\project MVC\wwwroot\lib\jquery\dist\jquery.slim.min.map
+D:\depi\project MVC\project MVC\wwwroot\css\admin-style.css
+D:\depi\project MVC\project MVC\wwwroot\css\elegant-icons.css
+D:\depi\project MVC\project MVC\wwwroot\css\style.css
+D:\depi\project MVC\project MVC\wwwroot\css\stylelogin.css
+D:\depi\project MVC\project MVC\wwwroot\lib\jquery\LICENSE.txt
+D:\depi\project MVC\project MVC\wwwroot\favicon.ico
+D:\depi\project MVC\project MVC\wwwroot\js\admin-main.js
+D:\depi\project MVC\project MVC\wwwroot\js\login.js
+D:\depi\project MVC\project MVC\wwwroot\js\main.js

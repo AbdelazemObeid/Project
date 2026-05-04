@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using project_MVC.Models;
 
 namespace project_MVC.data.configuration
 {
-    public class contactconfiguration : IEntityTypeConfiguration<Contact>
+    public class ContactConfiguration : IEntityTypeConfiguration<Contact>
     {
         public void Configure(EntityTypeBuilder<Contact> c)
         {

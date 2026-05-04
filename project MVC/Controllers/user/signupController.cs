@@ -1,13 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 
 namespace project_MVC.Controllers.user
 {
-    public class signupController : Controller
+    public class SignupController : Controller
     {
         [Route("/signup")]
         public IActionResult Index()
         {
-            return View("~/views/user/signup/signup.cshtml");
+            return View("~/Views/user/Signup/Signup.cshtml");
         }
     }
 }

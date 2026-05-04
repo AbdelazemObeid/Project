@@ -1,0 +1,57 @@
+@model List<project_MVC.Models.Product>
+@{
+    ViewData["Title"] = "Manage Products";
+    ViewData["ActivePage"] = "Products";
+    Layout = "~/Views/Shared/admin/_adminlayout.cshtml";
+}
+
+<section class="content-section active">
+    <div class="section-header flex-between">
+        <div>
+            <h1>Manage Products</h1>
+            <p>Traditional MVC Product Management</p>
+        </div>
+        <a href="/admin/products/create" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add Product</a>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Qty</th>
+                            <th>Color/Size</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var p in Model)
+                        {
+                            <tr>
+                                <td>#@p.id</td>
+                                <td><strong>@p.name</strong></td>
+                                <td>@p.price</td>
+                                <td><span class="badge badge-primary">@(p.category?.name ?? "N/A")</span></td>
+                                <td>@p.quantity</td>
+                                <td>@p.color / @p.size</td>
+                                <td style="display: flex; gap: 5px;">
+                                    <a href="/admin/products/details/@p.id" class="btn-icon btn-info" style="margin-right: 5px; color: white; background: #17a2b8; padding: 8px; border-radius: 4px; text-decoration: none;"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="/admin/products/edit/@p.id" class="btn-icon btn-edit"><i class="fa-solid fa-pen"></i></a>
+                                    <form action="/admin/products/delete/@p.id" method="post" style="display:inline;" onsubmit="return confirm('Delete this product?')">
+                                        <button type="submit" class="btn-icon btn-delete" style="cursor:pointer; border:none; background:none;">
+                                            <i class="fa-solid fa-trash" style="color:white; background:#ff4d4d; padding:8px; border-radius:4px;"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

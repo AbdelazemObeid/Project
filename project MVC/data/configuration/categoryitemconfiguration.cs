@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using project_MVC.Models;
 
 namespace project_MVC.data.configuration
 {
-    public class categoryitemconfiguration : IEntityTypeConfiguration<Categoryitems>
+    public class CategoryItemConfiguration : IEntityTypeConfiguration<Categoryitems>
     {
         public void Configure(EntityTypeBuilder<Categoryitems> c)
         {
