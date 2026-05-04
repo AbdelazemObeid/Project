@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using project_MVC.data;
 
 namespace project_MVC.Controllers.user
 {
