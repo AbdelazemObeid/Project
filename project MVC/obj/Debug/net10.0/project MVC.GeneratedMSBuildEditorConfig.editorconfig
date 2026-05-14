@@ -82,10 +82,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cdXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/depi/GET/project MVC/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/depi/GET/project MVC/Views/Shared/admin/_adminlayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluXF9hZG1pbmxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -106,6 +102,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/depi/GET/project MVC/Views/user/category/category.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxjYXRlZ29yeVxjYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/depi/GET/project MVC/Views/user/checkout/checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxjaGVja291dFxjaGVja291dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -118,36 +118,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxob21lXGhvbWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/depi/GET/project MVC/Views/user/kids/kids.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxraWRzXGtpZHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/depi/GET/project MVC/Views/user/LoginController1/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxMb2dpbkNvbnRyb2xsZXIxXExvZ2luLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/depi/GET/project MVC/Views/user/men/men.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxtZW5cbWVuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/depi/GET/project MVC/Views/user/product_details/product.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxwcm9kdWN0X2RldGFpbHNccHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/depi/GET/project MVC/Views/user/shopCart/shopCart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxzaG9wQ2FydFxzaG9wQ2FydC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/depi/GET/project MVC/Views/user/shop/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxzaG9wXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/depi/GET/project MVC/Views/user/signup/signup.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxzaWdudXBcc2lnbnVwLmNzaHRtbA==
+[D:/depi/GET/project MVC/Views/user/shop_cart/shop_cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxzaG9wX2NhcnRcc2hvcF9jYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/depi/GET/project MVC/Views/user/woman/woman.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclx3b21hblx3b21hbi5jc2h0bWw=
+[D:/depi/GET/project MVC/Views/user/signup/signup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxzaWdudXBcc2lnbnVwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/depi/GET/project MVC/Views/_ViewImports.cshtml]
