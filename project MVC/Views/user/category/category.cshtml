@@ -1,43 +1,20 @@
-@{
+﻿@{
     Layout = "~/Views/Shared/user/_userlayout.cshtml";
 }
-@section breadCrumb {
-    <div class="col-xl-6 col-lg-7">
-        <nav class="header__menu">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/woman">Women's</a></li>
-                <li class="active"><a href="/men">Men's</a></li>
-                <li><a href="/kids">Kid's</a></li>
-                <li><a href="/shop">Shop</a></li>
-                <li><a href="#">Pages</a>
-                    <ul class="dropdown">
-                        <li><a href="/product_details">Product Details</a></li>
-                        <li><a href="/shop-cart">Shop Cart</a></li>
-                        <li><a href="/checkout">Checkout</a></li>
-                    </ul>
-                </li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-}
-
 <!-- Category Hero Begin -->
-<section class="category-hero set-bg" data-setbg="img/banner/banner-3.jpg">
+<section class="category-hero set-bg" data-setbg="img/banner/banner-4.jpg">
     <div class="container">
         <div class="row kids">
             <div class="col-lg-12">
                 <div class="category-hero__text">
-                    <h2>Men's Collection</h2>
-                    <p>Discover the latest trends in men's fashion</p>
+                    <h2>Women's Collection</h2>
+                    <p>Discover the latest trends in women's fashion</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!-- Category Hero End -->
-
 <!-- Breadcrumb Begin -->
 <div class="breadcrumb-option">
     <div class="container">
@@ -45,14 +22,13 @@
             <div class="col-lg-12">
                 <div class="breadcrumb__links">
                     <a href="/"><i class="fa-solid fa-house"></i> Home</a>
-                    <span>Men's</span>
+                    <span>Women's</span>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- Breadcrumb End -->
-
 <!-- Category Section Begin -->
 <section class="shop spad">
     <div class="container">
@@ -66,22 +42,51 @@
                         <div class="categories__accordion">
                             <div class="accordion" id="accordionExample">
                                 <div class="card">
-                                <div class="card-heading">
-                                    <a data-bs-toggle="collapse" href="#collapseMen">Clothing</a>
-                                </div>
-                                <div id="collapseMen" class="collapse" data-bs-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <ul>
-                                            <li><a href="#">Coats</a></li>
-                                            <li><a href="#">Jackets</a></li>
-                                            <li><a href="#">Shirts</a></li>
-                                            <li><a href="#">Sweatshirts</a></li>
-                                            <li><a href="#">T-shirts</a></li>
-                                            <li><a href="#">Jeans</a></li>
-                                        </ul>
+                                    <div class="card-heading">
+                                        <a data-bs-toggle="collapse" href="#collapseMen">Clothing</a>
+                                    </div>
+                                    <div id="collapseMen" class="collapse" data-bs-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><a href="#">Coats</a></li>
+                                                <li><a href="#">Jackets</a></li>
+                                                <li><a href="#">Sweatshirts</a></li>
+                                                <li><a href="#">Dresses</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                                <!-- <div class="card">
+                                        <div class="card-heading">
+                                            <a data-bs-toggle="collapse" href="#collapseThree">Bags</a>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li><a href="#">Handbags</a></li>
+                                                    <li><a href="#">Backpacks</a></li>
+                                                    <li><a href="#">Clutches</a></li>
+                                                    <li><a href="#">Totes</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                <!-- <div class="card">
+                                        <div class="card-heading">
+                                            <a data-bs-toggle="collapse" href="#collapseFour">Accessories</a>
+                                        </div>
+                                        <div id="collapseFour" class="collapse" data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li><a href="#">Jewelry</a></li>
+                                                    <li><a href="#">Watches</a></li>
+                                                    <li><a href="#">Sunglasses</a></li>
+                                                    <li><a href="#">Scarves</a></li>
+                                                    <li><a href="#">Belts</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div> -->
                             </div>
                         </div>
                     </div>
@@ -91,7 +96,7 @@
                         </div>
                         <div class="filter-range-wrap">
                             <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                                data-min="699" data-max="3000"></div>
+                                 data-min="699" data-max="3000"></div>
                             <div class="range-slider">
                                 <div class="price-input">
                                     <p>Price:</p>
@@ -225,11 +230,14 @@
                 <div class="row product__filter">
                     <div class="col-lg-4 col-md-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-111.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-1.jpg">
                                 <div class="label new">New</div>
                                 <ul class="product__hover">
+                                    <!-- <li><a href="./product-details.html"><i class="fa-solid fa-eye"></i></a></li>
+                                        <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                        <li><a href="#"><span class="icon_bag_alt"></span></a></li> -->
                                     <li>
-                                        <a href="/product_details">
+                                        <a href="./product-details.html">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
                                     </li>
@@ -246,7 +254,8 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a href="/product_details">Closed Capicho Sweatshirt – Milton Fabric</a>
+                                <h6>
+                                    <a href="./product-details.html">Closed Capicho Sweatshirt – Milton Fabric</a>
                                 </h6>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
@@ -261,10 +270,10 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-222.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-2.jpg">
                                 <ul class="product__hover">
                                     <li>
-                                        <a href="/product_details">
+                                        <a href="./product-details.html">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
                                     </li>
@@ -281,7 +290,7 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a href="/product_details">SWT/26706</a></h6>
+                                <h6><a href="./product-details.html">SWT/26706</a></h6>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -295,10 +304,10 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-333.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-3.jpg">
                                 <ul class="product__hover">
                                     <li>
-                                        <a href="/product_details">
+                                        <a href="./product-details.html">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
                                     </li>
@@ -315,7 +324,7 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a href="/product_details">SWT/26804</a></h6>
+                                <h6><a href="./product-details.html">SWT/26804</a></h6>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -329,10 +338,10 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-444.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-4.jpg">
                                 <ul class="product__hover">
                                     <li>
-                                        <a href="/product_details">
+                                        <a href="./product-details.html">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
                                     </li>
@@ -349,7 +358,7 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a href="/product_details">JAK/26609</a></h6>
+                                <h6><a href="./product-details.html">JAK/26609</a></h6>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -363,11 +372,11 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="product__item sale">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-555.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-5.jpg">
                                 <div class="label">Sale</div>
                                 <ul class="product__hover">
                                     <li>
-                                        <a href="/product_details">
+                                        <a href="./product-details.html">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
                                     </li>
@@ -384,7 +393,8 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a href="/product_details">Capicho Closed Sweatshirt – Milton Fabric</a>
+                                <h6>
+                                    <a href="./product-details.html">Capicho Closed Sweatshirt – Milton Fabric</a>
                                 </h6>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
@@ -399,10 +409,10 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-666.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-6.jpg">
                                 <ul class="product__hover">
                                     <li>
-                                        <a href="/product_details">
+                                        <a href="./product-details.html">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
                                     </li>
@@ -419,7 +429,8 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a href="/product_details">Closed Capicho Sweatshirt – Milton Fabric</a>
+                                <h6>
+                                    <a href="./product-details.html">Closed Capicho Sweatshirt – Milton Fabric</a>
                                 </h6>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
@@ -434,10 +445,10 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-777.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-7.jpg">
                                 <ul class="product__hover">
                                     <li>
-                                        <a href="/product_details">
+                                        <a href="./product-details.html">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
                                     </li>
@@ -454,7 +465,8 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a href="/product_details">Closed Capicho Sweatshirt – Milton Fabric</a>
+                                <h6>
+                                    <a href="./product-details.html">Closed Capicho Sweatshirt – Milton Fabric</a>
                                 </h6>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
@@ -469,11 +481,11 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-888.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-8.jpg">
                                 <div class="label stockout stockblue">Out Of Stock</div>
                                 <ul class="product__hover">
                                     <li>
-                                        <a href="/product_details">
+                                        <a href="./product-details.html">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
                                     </li>
@@ -490,7 +502,8 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a href="/product_details">W-Zipper Capicho Sweatshirt – Milton Fabric</a>
+                                <h6>
+                                    <a href="./product-details.html">W-Zipper Capicho Sweatshirt – Milton Fabric</a>
                                 </h6>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
@@ -505,11 +518,11 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="product__item sale">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-999.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/shop-9.jpg">
                                 <div class="label">Sale</div>
                                 <ul class="product__hover">
                                     <li>
-                                        <a href="/product_details">
+                                        <a href="./product-details.html">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
                                     </li>
@@ -526,7 +539,7 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a href="/product_details">JAK/26609</a></h6>
+                                <h6><a href="./product-details.html">JAK/26609</a></h6>
                                 <div class="rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>

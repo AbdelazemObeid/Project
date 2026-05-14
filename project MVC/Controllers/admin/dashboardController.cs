@@ -6,9 +6,9 @@ namespace project_MVC.Controllers.admin
     public class DashboardController : Controller
     {
         [Route("/admin/dashboard")]
-        public IActionResult Index()
+        public IActionResult Index(Project_context context)
         {
-            using var context = new Project_context();
+            using var _ = context;
             ViewBag.ProductsCount = context.Products.Count();
             ViewBag.UsersCount = context.Users.Count();
             ViewBag.OrdersCount = context.Orders.Count();
