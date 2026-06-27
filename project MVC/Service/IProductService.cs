@@ -1,8 +1,8 @@
 ﻿using project_MVC.Models;
 
-namespace project_MVC.Repositories
+namespace project_MVC.Service
 {
-    public interface IProductReposatory : IGenericRepository<Product>
+    public interface IProductService : IGenericService<Product>
     {
         List<Product> Getallwithcatandsup();
         Product Getbyname(string name);

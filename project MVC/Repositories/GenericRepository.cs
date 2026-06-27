@@ -1,4 +1,5 @@
-﻿using project_MVC.data;
+﻿using Microsoft.EntityFrameworkCore;
+using project_MVC.data;
 
 namespace project_MVC.Repositories
 {
@@ -22,7 +23,7 @@ namespace project_MVC.Repositories
 
         public List<T> getAll()
         {
-            return context.Set<T>().ToList();
+            return context.Set<T>().OrderBy(e => EF.Property<object>(e, "id")).ToList();
         }
 
         public T getById(int id)

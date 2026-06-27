@@ -10,9 +10,22 @@ namespace project_MVC.Repositories
         {
         }
 
+        public List<Product> get4bycat(int id)
+        {
+            return context.Products.
+                Where(p => p.category_id == context.Products.
+                FirstOrDefault(x => x.id == id)
+                .category_id && p.id != id).Take(4).ToList();
+        }
+
         public List<Product> Getallwithcatandsup()
         {
             return context.Products.Include("category").Include("sup_category").ToList();
+        }
+
+        public List<Product> getbycatwithcatandsup(int id)
+        {
+            return context.Products.Where(p => p.category_id == id).Include(p => p.category).ThenInclude(p => p.items).ToList();
         }
 
         public Product getbyidwithcatandsup(int id)
