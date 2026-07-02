@@ -1093,4 +1093,28 @@ window.onscroll = function () {
         button.style.display = "none"; // يختفي
     }
 };
+$('.qtybtn').on('click', function () {
+    var $button = $(this);
+    var oldValue = parseInt($button.parent().find('input').val());
+    var max = parseInt($button.parent().find('input').attr('max'));
+    var min = parseInt($button.parent().find('input').attr('min'));
 
+    if ($button.hasClass('inc')) { // زر +
+        if (oldValue < max) {
+            oldValue++;
+        }
+    } else { // زر -
+        if (oldValue > min) {
+            oldValue--;
+        }
+    }
+
+    $button.parent().find('input').val(oldValue);
+});
+if ($(this).hasClass('inc')) {
+    if (oldValue < max)
+        oldValue++;
+} else {
+    if (oldValue > min)
+        oldValue--;
+}

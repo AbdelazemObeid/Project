@@ -149,7 +149,7 @@ namespace project_MVC.Controllers.admin
                 product.price = updatedProduct.price;
                 product.description = updatedProduct.description;
                 product.category_id = updatedProduct.category_id;
-                product.color = updatedProduct.color;
+                product.colors = updatedProduct.colors;
                 product.size = updatedProduct.size;
                 product.quantity = updatedProduct.quantity;
                 

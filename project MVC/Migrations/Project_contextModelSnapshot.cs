@@ -32,9 +32,6 @@ namespace project_MVC.Migrations
                     b.Property<int>("User_id")
                         .HasColumnType("int");
 
-                    b.Property<int?>("code")
-                        .HasColumnType("int");
-
                     b.Property<int>("sup_price")
                         .HasColumnType("int");
 
@@ -82,6 +79,10 @@ namespace project_MVC.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<string>("image_url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("name")
                         .IsRequired()
@@ -144,6 +145,29 @@ namespace project_MVC.Migrations
                     b.HasIndex("user_id");
 
                     b.ToTable("contacts", (string)null);
+                });
+
+            modelBuilder.Entity("project_MVC.Models.Favourite", b =>
+                {
+                    b.Property<int>("favourite_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("favourite_id"));
+
+                    b.Property<int>("product_id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("user_id")
+                        .HasColumnType("int");
+
+                    b.HasKey("favourite_id");
+
+                    b.HasIndex("product_id");
+
+                    b.HasIndex("user_id");
+
+                    b.ToTable("favourites", (string)null);
                 });
 
             modelBuilder.Entity("project_MVC.Models.Order", b =>
@@ -248,14 +272,13 @@ namespace project_MVC.Migrations
                     b.Property<int>("category_id")
                         .HasColumnType("int");
 
-                    b.Property<string>("color")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
                     b.Property<string>("description")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("image_url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("name")
                         .IsRequired()
@@ -267,11 +290,6 @@ namespace project_MVC.Migrations
 
                     b.Property<int>("quantity")
                         .HasColumnType("int");
-
-                    b.Property<string>("size")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("sup_category_id")
                         .HasColumnType("int");
@@ -347,6 +365,72 @@ namespace project_MVC.Migrations
                     b.ToTable("users", (string)null);
                 });
 
+            modelBuilder.Entity("project_MVC.Models.productcolor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("color")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductColors");
+                });
+
+            modelBuilder.Entity("project_MVC.Models.productimage", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<string>("image_url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("product_id")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("product_id");
+
+                    b.ToTable("ProductImages");
+                });
+
+            modelBuilder.Entity("project_MVC.Models.productsize", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("size")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductSizes");
+                });
+
             modelBuilder.Entity("project_MVC.Models.Cart", b =>
                 {
                     b.HasOne("project_MVC.Models.User", "user")
@@ -403,6 +487,25 @@ namespace project_MVC.Migrations
                         .HasForeignKey("user_id")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("user");
+                });
+
+            modelBuilder.Entity("project_MVC.Models.Favourite", b =>
+                {
+                    b.HasOne("project_MVC.Models.Product", "product")
+                        .WithMany("favourites")
+                        .HasForeignKey("product_id")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("project_MVC.Models.User", "user")
+                        .WithMany("favourites")
+                        .HasForeignKey("user_id")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("product");
 
                     b.Navigation("user");
                 });
@@ -472,6 +575,39 @@ namespace project_MVC.Migrations
                     b.Navigation("user");
                 });
 
+            modelBuilder.Entity("project_MVC.Models.productcolor", b =>
+                {
+                    b.HasOne("project_MVC.Models.Product", "Product")
+                        .WithMany("colors")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("project_MVC.Models.productimage", b =>
+                {
+                    b.HasOne("project_MVC.Models.Product", "product")
+                        .WithMany("productimages")
+                        .HasForeignKey("product_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("product");
+                });
+
+            modelBuilder.Entity("project_MVC.Models.productsize", b =>
+                {
+                    b.HasOne("project_MVC.Models.Product", "Product")
+                        .WithMany("size")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("project_MVC.Models.Cart", b =>
                 {
                     b.Navigation("cart_item");
@@ -499,7 +635,15 @@ namespace project_MVC.Migrations
                 {
                     b.Navigation("cart_item");
 
+                    b.Navigation("colors");
+
+                    b.Navigation("favourites");
+
                     b.Navigation("order_item");
+
+                    b.Navigation("productimages");
+
+                    b.Navigation("size");
                 });
 
             modelBuilder.Entity("project_MVC.Models.Sup_category", b =>
@@ -515,6 +659,8 @@ namespace project_MVC.Migrations
                         .IsRequired();
 
                     b.Navigation("contact");
+
+                    b.Navigation("favourites");
 
                     b.Navigation("orders");
 

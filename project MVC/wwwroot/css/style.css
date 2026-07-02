@@ -3314,3 +3314,39 @@ body {
     z-index: 1000;
     background: #fff;
 }
+.header__right__widget li,
+.offcanvas__widget li {
+    position: relative;
+}
+
+    .header__right__widget li.active a,
+    .offcanvas__widget li.active a {
+        color: #ca1515;
+    }
+
+    .header__right__widget li.active::after,
+    .offcanvas__widget li.active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 100%;
+        height: 2px;
+        background: #ca1515;
+    }
+    /* Active icon */
+    .header__right__widget li.active-icon a,
+    .offcanvas__widget li.active-icon a {
+        color: #ca1515 !important;
+    }
+
+        .header__right__widget li.active-icon a i,
+        .offcanvas__widget li.active-icon a i {
+            color: #ca1515 !important;
+        }
+hr {
+    border: none;
+    height: 2px;
+    background-color: #444444;
+    margin: 20px 0;
+}

@@ -17,12 +17,13 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
+build_property.EntryPointFilePath = 
 build_property.RootNamespace = project_MVC
 build_property.RootNamespace = project_MVC
 build_property.ProjectDir = D:\depi\GET\project MVC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.RazorLangVersion = 9.0
+build_property.RazorLangVersion = 10.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = D:\depi\GET\project MVC
@@ -112,6 +113,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/depi/GET/project MVC/Views/user/contact/contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxjb250YWN0XGNvbnRhY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/depi/GET/project MVC/Views/user/favourite/favourite.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxmYXZvdXJpdGVcZmF2b3VyaXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/depi/GET/project MVC/Views/user/home/home.cshtml]

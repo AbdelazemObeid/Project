@@ -12,5 +12,6 @@
         public Cart cart { get; set; }
         public List<Product> products { get; set; }
         public List<Contact> contact { get; set; }
+        public List<Favourite> favourites { get; set; }
     }
 }

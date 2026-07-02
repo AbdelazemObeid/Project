@@ -16,7 +16,8 @@ namespace project_MVC.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
+                    name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    image_url = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -99,7 +100,6 @@ namespace project_MVC.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    code = table.Column<int>(type: "int", nullable: true),
                     sup_price = table.Column<int>(type: "int", nullable: false),
                     total_price = table.Column<int>(type: "int", nullable: false),
                     User_id = table.Column<int>(type: "int", nullable: false)
@@ -177,9 +177,8 @@ namespace project_MVC.Migrations
                     price = table.Column<decimal>(type: "money", nullable: false),
                     description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
                     quantity = table.Column<int>(type: "int", nullable: false),
-                    color = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    size = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     category_id = table.Column<int>(type: "int", nullable: false),
+                    image_url = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     sup_category_id = table.Column<int>(type: "int", nullable: false),
                     user_id = table.Column<int>(type: "int", nullable: false)
                 },
@@ -234,6 +233,32 @@ namespace project_MVC.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "favourites",
+                columns: table => new
+                {
+                    favourite_id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    user_id = table.Column<int>(type: "int", nullable: false),
+                    product_id = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_favourites", x => x.favourite_id);
+                    table.ForeignKey(
+                        name: "FK_favourites_products_product_id",
+                        column: x => x.product_id,
+                        principalTable: "products",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_favourites_users_user_id",
+                        column: x => x.user_id,
+                        principalTable: "users",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "order_items",
                 columns: table => new
                 {
@@ -258,6 +283,66 @@ namespace project_MVC.Migrations
                         principalTable: "products",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProductColors",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    color = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ProductId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductColors", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ProductColors_products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "products",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProductImages",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    image_url = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    product_id = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductImages", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_ProductImages_products_product_id",
+                        column: x => x.product_id,
+                        principalTable: "products",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProductSizes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    size = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ProductId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductSizes", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ProductSizes_products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "products",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -293,6 +378,16 @@ namespace project_MVC.Migrations
                 column: "user_id");
 
             migrationBuilder.CreateIndex(
+                name: "IX_favourites_product_id",
+                table: "favourites",
+                column: "product_id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_favourites_user_id",
+                table: "favourites",
+                column: "user_id");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_order_items_order_id",
                 table: "order_items",
                 column: "order_id");
@@ -308,6 +403,16 @@ namespace project_MVC.Migrations
                 column: "user_id");
 
             migrationBuilder.CreateIndex(
+                name: "IX_ProductColors_ProductId",
+                table: "ProductColors",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProductImages_product_id",
+                table: "ProductImages",
+                column: "product_id");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_products_category_id",
                 table: "products",
                 column: "category_id");
@@ -321,6 +426,11 @@ namespace project_MVC.Migrations
                 name: "IX_products_user_id",
                 table: "products",
                 column: "user_id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProductSizes_ProductId",
+                table: "ProductSizes",
+                column: "ProductId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_users_email",
@@ -342,7 +452,19 @@ namespace project_MVC.Migrations
                 name: "contacts");
 
             migrationBuilder.DropTable(
+                name: "favourites");
+
+            migrationBuilder.DropTable(
                 name: "order_items");
+
+            migrationBuilder.DropTable(
+                name: "ProductColors");
+
+            migrationBuilder.DropTable(
+                name: "ProductImages");
+
+            migrationBuilder.DropTable(
+                name: "ProductSizes");
 
             migrationBuilder.DropTable(
                 name: "carts");

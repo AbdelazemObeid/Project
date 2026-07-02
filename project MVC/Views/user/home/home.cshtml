@@ -59,9 +59,31 @@
                 <div class="col-lg-8 col-md-8">
                     <ul class="filter__controls">
                         <li class="active" data-filter="*">All</li>
-                        @foreach (var c in ViewBag.categories)
+                        @if (ViewBag.categories.Count > 5)
                         {
-                            <li data-filter=".@c.name">@c.name</li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle"
+                                   href="#"
+                                   role="button"
+                                   data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    Categories
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    @foreach (var c in ViewBag.categories)
+                                    {
+                                        <li class="dropdown-item" data-filter=".@c.name">@c.name</li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            @foreach (var c in ViewBag.categories)
+                            {
+                                <li data-filter=".@c.name">@c.name</li>
+                            }
                         }
                         <!-- <li data-filter=".accessories">Accessories</li>
                     <li data-filter=".cosmetic">Cosmetics</li> -->

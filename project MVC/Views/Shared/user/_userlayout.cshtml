@@ -1,5 +1,7 @@
 ﻿@{
     var cat = ViewBag.Categories as List<Category>;
+    int favoritesCount = ViewBag.FavoritesCount ?? 0;
+    int cartCount = ViewBag.CartCount ?? 0;
 }
 <html lang="en">
 
@@ -68,21 +70,21 @@
             </li>
 
             <li>
-                <a href="#">
+                <a asp-controller="Favourite" asp-action="Index" asp-route-userId="@ViewBag.UserId">
                     <i class="fa-regular fa-heart"></i>
-                    <div class="tip">2</div>
+                    <div class="tip">@favoritesCount</div>
                 </a>
             </li>
 
             <li>
-                <a href="#">
+                <a asp-controller="shop_cart" asp-action="Index" asp-route-userId="@ViewBag.UserId">
                     <i class="fa-solid fa-bag-shopping"></i>
-                    <div class="tip">2</div>
+                    <div class="tip">@cartCount</div>
                 </a>
             </li>
         </ul>
         <div class="offcanvas__logo">
-            <a href="/">
+            <a asp-controller="Home" asp-action="Index">
                 <img src="img/logo.png" alt="">
             </a>
         </div>
@@ -106,6 +108,10 @@
                 @{
                     var controller = ViewContext.RouteData.Values["controller"]?.ToString().ToLower();
                     var action = ViewContext.RouteData.Values["action"]?.ToString().ToLower();
+                }
+                @{
+                    var favActive = controller == "favourite";
+                    var cartActive = controller == "shop_cart";
                 }
 
                 <div class="col-xl-6 col-lg-7">
@@ -148,7 +154,7 @@
                                     path.Contains("checkout");
                             }
 
-                            <li class="@(isPagesActive ? "active" : "")">
+                            @* <li class="@(isPagesActive ? "active" : "")">
                                 <a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li class="@(controller == "shop_cart" ? "active" : "")">
@@ -159,7 +165,7 @@
                                         <a asp-controller="checkout" asp-action="Index">Checkout</a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> *@
 
                             <!-- Contact -->
                             <li class="@(controller == "contact" ? "active" : "")">
@@ -189,16 +195,17 @@
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-regular fa-heart"></i>
-                                        <div class="tip">2</div>
+                                <li class="@(favActive ? "active-icon" : "")">
+                                    <a asp-controller="Favourite" asp-action="Index" asp-route-userId="@ViewBag.UserId">
+                                        <i class="@(favActive ? "fa-solid fa-heart" : "fa-regular fa-heart")"></i>
+                                        <div class="tip">@favoritesCount</div>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#">
+
+                                <li class="@(cartActive ? "active-icon" : "")">
+                                    <a asp-controller="shop_cart" asp-action="Index" asp-route-userId="@ViewBag.UserId">
                                         <i class="fa-solid fa-bag-shopping"></i>
-                                        <div class="tip">2</div>
+                                        <div class="tip">@cartCount</div>
                                     </a>
                                 </li>
                             </ul>

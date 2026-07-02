@@ -19,6 +19,10 @@ namespace project_MVC.data
         public DbSet<Sup_category> SupCategories { get; set; }
         public DbSet<Categoryitems> CategoryItems { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Favourite> Favourites { get; set; }
+        public DbSet<productcolor> ProductColors { get; set; }
+        public DbSet<productsize> ProductSizes { get; set; }
+        public DbSet<productimage> ProductImages { get; set; }
         //override protected void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //    optionsBuilder.UseSqlServer("Server=.;Database=Project_Database;Trusted_connection=True;Trust Server Certificate=True");
