@@ -8,24 +8,24 @@ namespace project_MVC.Controllers.admin
     [Route("admin/users")]
     public class AdminUsersController : Controller
     {
-        private readonly Project_context _context;
+        private readonly Project_context context;
 
-        public AdminUsersController()
+        public AdminUsersController(Project_context _context)
         {
-            _context = new Project_context();
+            context = _context;
         }
 
         [HttpGet("")]
         public IActionResult Index()
         {
-            var users = _context.Users.ToList();
+            var users = context.Users.ToList();
             return View("~/views/admin/users/Index.cshtml", users);
         }
 
         [HttpGet("details/{id}")]
         public IActionResult Details(int id)
         {
-            var user = _context.Users.Find(id);
+            var user = context.Users.Find(id);
             if (user == null) return NotFound();
             return View("~/views/admin/users/Details.cshtml", user);
         }
@@ -51,8 +51,8 @@ namespace project_MVC.Controllers.admin
                     return View("~/views/admin/users/Create.cshtml", user);
                 }
 
-                _context.Users.Add(user);
-                _context.SaveChanges();
+                context.Users.Add(user);
+                context.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
@@ -64,7 +64,7 @@ namespace project_MVC.Controllers.admin
         [HttpGet("edit/{id}")]
         public IActionResult Edit(int id)
         {
-            var user = _context.Users.Find(id);
+            var user = context.Users.Find(id);
             if (user == null) return NotFound();
             return View("~/views/admin/users/Edit.cshtml", user);
         }
@@ -89,7 +89,7 @@ namespace project_MVC.Controllers.admin
                     return View("~/views/admin/users/Edit.cshtml", updatedUser);
                 }
 
-                var user = _context.Users.Find(id);
+                var user = context.Users.Find(id);
                 if (user != null)
                 {
                     user.name = updatedUser.name;
@@ -100,7 +100,7 @@ namespace project_MVC.Controllers.admin
                     }
                     user.role = updatedUser.role;
                     
-                    _context.SaveChanges();
+                    context.SaveChanges();
                 }
                 return RedirectToAction("Index");
             }
@@ -115,7 +115,7 @@ namespace project_MVC.Controllers.admin
         {
             try
             {
-                var user = _context.Users
+                var user = context.Users
                     .Include(u => u.products)
                     .Include(u => u.orders)
                     .Include(u => u.contact)
@@ -125,13 +125,13 @@ namespace project_MVC.Controllers.admin
                 if (user != null)
                 {
                     // مسح أي بيانات مرتبطة بالمستخدم لمنع أخطاء الـ Foreign Key
-                    if (user.products != null) _context.Products.RemoveRange(user.products);
-                    if (user.orders != null) _context.Orders.RemoveRange(user.orders);
-                    if (user.contact != null) _context.Contacts.RemoveRange(user.contact);
-                    if (user.cart != null) _context.Carts.Remove(user.cart);
+                    if (user.products != null) context.Products.RemoveRange(user.products);
+                    if (user.orders != null) context.Orders.RemoveRange(user.orders);
+                    if (user.contact != null) context.Contacts.RemoveRange(user.contact);
+                    if (user.cart != null) context.Carts.Remove(user.cart);
 
-                    _context.Users.Remove(user);
-                    _context.SaveChanges();
+                    context.Users.Remove(user);
+                    context.SaveChanges();
                 }
                 return RedirectToAction("Index");
             }

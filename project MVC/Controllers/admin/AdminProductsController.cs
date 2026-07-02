@@ -8,11 +8,11 @@ namespace project_MVC.Controllers.admin
     [Route("admin/products")]
     public class AdminProductsController : Controller
     {
-        private readonly Project_context _context;
+        private readonly Project_context context;
 
-        public AdminProductsController()
+        public AdminProductsController(Project_context _context)
         {
-            _context = new Project_context();
+            context = _context;
         }
 
         // 1. عرض كل المنتجات
@@ -21,7 +21,7 @@ namespace project_MVC.Controllers.admin
         {
             try
             {
-                var products = _context.Products
+                var products = context.Products
                     .Include(p => p.category)
                     .ToList();
                 return View("~/views/admin/products/Index.cshtml", products);
@@ -36,7 +36,7 @@ namespace project_MVC.Controllers.admin
         [HttpGet("details/{id}")]
         public IActionResult Details(int id)
         {
-            var product = _context.Products
+            var product = context.Products
                 .Include(p => p.category)
                 .FirstOrDefault(p => p.id == id);
                 
@@ -51,7 +51,7 @@ namespace project_MVC.Controllers.admin
             try
             {
                 // التأكد من وجود الأقسام الأساسية (Men, Women, Kids) تلقائياً لتسهيل العمل
-                var categories = _context.Categories.ToList();
+                var categories = context.Categories.ToList();
                 string[] defaultCats = { "Men", "Women", "Kids" };
 
                 bool changed = false;
@@ -59,15 +59,15 @@ namespace project_MVC.Controllers.admin
                 {
                     if (!categories.Any(c => c.name != null && c.name.Trim().Equals(catName, StringComparison.OrdinalIgnoreCase)))
                     {
-                        _context.Categories.Add(new Category { name = catName });
+                        context.Categories.Add(new Category { name = catName });
                         changed = true;
                     }
                 }
 
                 if (changed)
                 {
-                    _context.SaveChanges();
-                    categories = _context.Categories.ToList();
+                    context.SaveChanges();
+                    categories = context.Categories.ToList();
                 }
 
                 ViewBag.Categories = categories;
@@ -94,31 +94,31 @@ namespace project_MVC.Controllers.admin
 
                 if (!ModelState.IsValid)
                 {
-                    ViewBag.Categories = _context.Categories.ToList();
+                    ViewBag.Categories = context.Categories.ToList();
                     return View("~/views/admin/products/Create.cshtml", product);
                 }
 
                 // إعداد بيانات افتراضية لمنع أخطاء الـ Foreign Key
-                var user = _context.Users.FirstOrDefault();
+                var user = context.Users.FirstOrDefault();
                 if (user == null) {
                     user = new User { name = "Admin", email = "admin@test.com", password = "123", phone_number = "123", role = "Admin" };
-                    _context.Users.Add(user);
-                    _context.SaveChanges();
+                    context.Users.Add(user);
+                    context.SaveChanges();
                 }
 
-                var supCat = _context.SupCategories.FirstOrDefault();
+                var supCat = context.SupCategories.FirstOrDefault();
                 if (supCat == null) {
                     supCat = new Sup_category { Name = "General" };
-                    _context.SupCategories.Add(supCat);
-                    _context.SaveChanges();
+                    context.SupCategories.Add(supCat);
+                    context.SaveChanges();
                 }
 
                 product.user_id = user.id;
                 product.sup_category_id = supCat.Id;
                 // Removed hardcoded quantity to use the value from the form
 
-                _context.Products.Add(product);
-                _context.SaveChanges();
+                context.Products.Add(product);
+                context.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
@@ -131,10 +131,10 @@ namespace project_MVC.Controllers.admin
         [HttpGet("edit/{id}")]
         public IActionResult Edit(int id)
         {
-            var product = _context.Products.Find(id);
+            var product = context.Products.Find(id);
             if (product == null) return NotFound();
             
-            ViewBag.Categories = _context.Categories.ToList();
+            ViewBag.Categories = context.Categories.ToList();
             return View("~/views/admin/products/Edit.cshtml", product);
         }
 
@@ -142,18 +142,18 @@ namespace project_MVC.Controllers.admin
         [HttpPost("edit/{id}")]
         public IActionResult Edit(int id, Product updatedProduct)
         {
-            var product = _context.Products.Find(id);
+            var product = context.Products.Find(id);
             if (product != null)
             {
                 product.name = updatedProduct.name;
                 product.price = updatedProduct.price;
                 product.description = updatedProduct.description;
                 product.category_id = updatedProduct.category_id;
-                product.color = updatedProduct.color;
+                product.colors = updatedProduct.colors;
                 product.size = updatedProduct.size;
                 product.quantity = updatedProduct.quantity;
                 
-                _context.SaveChanges();
+                context.SaveChanges();
             }
             return RedirectToAction("Index");
         }
@@ -164,7 +164,7 @@ namespace project_MVC.Controllers.admin
         {
             try 
             {
-                var product = _context.Products
+                var product = context.Products
                     .Include(p => p.cart_item)
                     .Include(p => p.order_item)
                     .FirstOrDefault(p => p.id == id);
@@ -172,11 +172,11 @@ namespace project_MVC.Controllers.admin
                 if (product != null)
                 {
                     // مسح الارتباطات أولاً لمنع خطأ الـ Foreign Key
-                    if (product.cart_item != null) _context.Cart_items.RemoveRange(product.cart_item);
-                    if (product.order_item != null) _context.Order_items.RemoveRange(product.order_item);
+                    if (product.cart_item != null) context.Cart_items.RemoveRange(product.cart_item);
+                    if (product.order_item != null) context.Order_items.RemoveRange(product.order_item);
                     
-                    _context.Products.Remove(product);
-                    _context.SaveChanges();
+                    context.Products.Remove(product);
+                    context.SaveChanges();
                 }
                 return RedirectToAction("Index");
             }

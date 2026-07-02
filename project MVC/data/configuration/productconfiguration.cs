@@ -27,12 +27,6 @@ namespace project_MVC.data.configuration
                 .HasMaxLength(500);
             p.Property(p => p.quantity)
                 .IsRequired();
-            p.Property(p => p.color)
-                .IsRequired()
-                .HasMaxLength(50);
-            p.Property(p => p.size)
-                .IsRequired()
-                .HasMaxLength(50);
             p.HasOne(p => p.sup_category)
                 .WithMany(s => s.products)
                 .HasForeignKey(p => p.sup_category_id)
@@ -41,6 +35,18 @@ namespace project_MVC.data.configuration
                 .WithMany(u => u.products)
                 .HasForeignKey(p => p.user_id)
                 .OnDelete(DeleteBehavior.Restrict);
+            p.HasMany(p => p.colors)
+                .WithOne(pc => pc.Product)
+                .HasForeignKey(pc => pc.ProductId)
+                .OnDelete(DeleteBehavior.Cascade);
+            p.HasMany(p => p.size)
+                .WithOne(ps => ps.Product)
+                .HasForeignKey(ps => ps.ProductId)
+                .OnDelete(DeleteBehavior.Cascade);
+            p.HasMany(p => p.productimages)
+                .WithOne(pi => pi.product)
+                .HasForeignKey(pi => pi.product_id)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

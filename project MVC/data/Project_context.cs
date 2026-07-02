@@ -5,6 +5,9 @@ namespace project_MVC.data
 {
     public class Project_context : DbContext
     {
+        public Project_context(DbContextOptions<Project_context> options) : base(options)
+        {
+        }
         public DbSet<User> Users { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Order_item> Order_items { get; set; }
@@ -16,10 +19,14 @@ namespace project_MVC.data
         public DbSet<Sup_category> SupCategories { get; set; }
         public DbSet<Categoryitems> CategoryItems { get; set; }
         public DbSet<Contact> Contacts { get; set; }
-        override protected void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=.;Database=Project_Database;Trusted_connection=True;Trust Server Certificate=True");
-        }
+        public DbSet<Favourite> Favourites { get; set; }
+        public DbSet<productcolor> ProductColors { get; set; }
+        public DbSet<productsize> ProductSizes { get; set; }
+        public DbSet<productimage> ProductImages { get; set; }
+        //override protected void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer("Server=.;Database=Project_Database;Trusted_connection=True;Trust Server Certificate=True");
+        //}
         override protected void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(Project_context).Assembly);
