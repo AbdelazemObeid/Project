@@ -5,7 +5,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace project_MVC.Controllers.admin
 {
-    [Route("admin/products")]
+    using Microsoft.AspNetCore.Authorization;
+
+[Authorize(Roles = "Admin")]
     public class AdminProductsController : Controller
     {
         private readonly Project_context context;
