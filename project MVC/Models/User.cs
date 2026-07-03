@@ -1,17 +1,25 @@
-﻿namespace project_MVC.Models
+using System;
+using System.Collections.Generic;
+
+namespace project_MVC.Models
 {
     public class User
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string email { get; set; }
-        public string password { get; set; }
-        public string phone_number { get; set; }
-        public string role { get; set; }
-        public List<Order> orders { get; set; }
-        public Cart cart { get; set; }
-        public List<Product> products { get; set; }
-        public List<Contact> contact { get; set; }
-        public List<Favourite> favourites { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
+
+        public string UserName { get; set; }
+
+        public string Email { get; set; }
+
+        public string PasswordHash { get; set; }
+
+        public string Role { get; set; } = "User";
+
+        // Navigation properties (optional, keep if needed)
+        public List<Order> Orders { get; set; }
+        public Cart Cart { get; set; }
+        public List<Product> Products { get; set; }
+        public List<Contact> Contact { get; set; }
+        public List<Favourite> Favourites { get; set; }
     }
 }

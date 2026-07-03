@@ -1155,3 +1155,15 @@ D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\l37q4kp7ta-{0}-muycvpuwrr-m
 D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\194c42bwh4-{0}-jfsiqqwiad-jfsiqqwiad.gz
 D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\slwmz8fvz5-{0}-q4hfjfbv69-q4hfjfbv69.gz
 D:\depi\GET\project MVC\obj\Debug\net10.0\compressed\m3n75gii4h-{0}-oanulkgv46-oanulkgv46.gz
+D:\depi\Project-main\project MVC\obj\Debug\net10.0\project MVC.csproj.AssemblyReference.cache
+D:\depi\Project-main\project MVC\obj\Debug\net10.0\rpswa.dswa.cache.json
+D:\depi\Project-main\project MVC\obj\Debug\net10.0\project MVC.GeneratedMSBuildEditorConfig.editorconfig
+D:\depi\Project-main\project MVC\obj\Debug\net10.0\project MVC.AssemblyInfoInputs.cache
+D:\depi\Project-main\project MVC\obj\Debug\net10.0\project MVC.AssemblyInfo.cs
+D:\depi\Project-main\project MVC\obj\Debug\net10.0\project MVC.csproj.CoreCompileInputs.cache
+D:\depi\Project-main\project MVC\obj\Debug\net10.0\project MVC.MvcApplicationPartsAssemblyInfo.cache
+D:\depi\Project-main\project MVC\obj\Debug\net10.0\project MVC.RazorAssemblyInfo.cache
+D:\depi\Project-main\project MVC\obj\Debug\net10.0\project MVC.RazorAssemblyInfo.cs
+D:\depi\Project-main\project MVC\obj\Debug\net10.0\project MVC.dll
+D:\depi\Project-main\project MVC\obj\Debug\net10.0\refint\project MVC.dll
+D:\depi\Project-main\project MVC\obj\Debug\net10.0\project MVC.pdb
