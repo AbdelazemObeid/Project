@@ -3149,23 +3149,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FsiOoo\\.nuget\\packages\\": {},
+    "C:\\Users\\3D STORE\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\depi\\GET\\project MVC\\project MVC.csproj",
+      "projectUniqueName": "D:\\مشروع DEPI\\project MVC\\project MVC.csproj",
       "projectName": "project MVC",
-      "projectPath": "D:\\depi\\GET\\project MVC\\project MVC.csproj",
-      "packagesPath": "C:\\Users\\FsiOoo\\.nuget\\packages\\",
-      "outputPath": "D:\\depi\\GET\\project MVC\\obj\\",
+      "projectPath": "D:\\مشروع DEPI\\project MVC\\project MVC.csproj",
+      "packagesPath": "C:\\Users\\3D STORE\\.nuget\\packages\\",
+      "outputPath": "D:\\مشروع DEPI\\project MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\FsiOoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\3D STORE\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

@@ -8,5 +8,7 @@
         public Product product { get; set; }
         public int cart_id { get; set; }
         public Cart cart { get; set; }
+
+
     }
 }

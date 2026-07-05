@@ -1,7 +1,144 @@
-﻿@{
+﻿@model List<project_MVC.Models.Cart_item>
+
+@{
     Layout = "~/Views/Shared/user/_userlayout.cshtml";
+    var totalCartPrice = Model != null ? Model.Sum(item => item.product.price * item.quantity) : 0;
 }
-<!-- Breadcrumb Begin -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<style>
+    .custom-cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    }
+
+    .custom-cart-table thead tr {
+    border-bottom: 2px solid #f2f2f2;
+    }
+
+    .custom-cart-table th,
+    .custom-cart-table td {
+    padding: 15px 10px;
+    vertical-align: middle;
+    }
+
+    .col-prod {
+    width: 30%;
+    text-align: left;
+    }
+
+    .col-price {
+    width: 12%;
+    text-align: left;
+    font-weight: 600;
+    }
+
+    .col-qty {
+    width: 13%;
+    text-align: left;
+    }
+
+    .col-total {
+    width: 13%;
+    text-align: left;
+    font-weight: 600;
+    color: #ca1515;
+    }
+
+    .col-size {
+    width: 12%;
+    text-align: left;
+    }
+
+    .col-color {
+    width: 12%;
+    text-align: left;
+    }
+
+    .col-action {
+    width: 8%;
+    text-align: center;
+    }
+
+    .cart-product-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    }
+
+    .cart-product-wrapper img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    }
+
+    .cart-product-wrapper h6 {
+    margin: 0;
+    font-weight: 600;
+    color: #111111;
+    }
+
+    .cart-input-style {
+    height: 38px;
+    min-width: 80px;
+    }
+
+    .qty-input-width {
+    width: 60px;
+    height: 38px;
+    }
+
+    .btn-remove-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #ffe6e6;
+    border-radius: 50%;
+    color: #dc3545;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    }
+
+    .btn-remove-item:hover {
+    background-color: #dc3545;
+    color: #ffffff;
+    }
+
+    .cart-row-border {
+    border-bottom: 1px solid #f2f2f2;
+    }
+
+    .empty-cart-msg {
+    padding: 30px !important;
+    font-size: 16px;
+    color: #666666;
+    }
+
+    .margin-top-sm {
+    margin-top: 20px;
+    }
+
+    .margin-top-md {
+    margin-top: 40px;
+    }
+</style>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="container mt-3">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>نجاح!</strong> @TempData["SuccessMessage"]
+        </div>
+    </div>
+}
+
 <div class="breadcrumb-option">
     <div class="container">
         <div class="row">
@@ -14,134 +151,105 @@
         </div>
     </div>
 </div>
-<!-- Breadcrumb End -->
-<!-- Shop Cart Section Begin -->
+
 <section class="shop-cart spad">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="shop__cart__table">
-                    <table>
+                    <table class="custom-cart-table">
                         <thead>
                             <tr>
-                                <th>Product</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
-                                <th></th>
+                                <th class="col-prod">Product</th>
+                                <th class="col-price">Price</th>
+                                <th class="col-qty">Quantity</th>
+                                <th class="col-total">Total</th>
+                                <th class="col-size">Size</th>
+                                <th class="col-color">Colour</th>
+                                <th class="col-action"></th>
                             </tr>
                         </thead>
                         <tbody id="cart-items">
-                            <tr>
-                                <td class="cart__product__item">
-                                    <img src="img/shop-cart/cp-1.jpg" alt="" loading="lazy" decoding="async">
-                                    <div class="cart__product__item__title">
-                                        <h6>Chain bucket bag</h6>
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="cart__price">$ 150.0</td>
-                                <td class="cart__quantity">
-                                    <div class="pro-qty">
-                                        <input type="text" value="1">
-                                    </div>
-                                </td>
-                                <td class="cart__total">$ 300.0</td>
-                                <td class="cart__close"><span class="icon_close"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="cart__product__item">
-                                    <img src="img/shop-cart/cp-2.jpg" alt="" loading="lazy" decoding="async">
-                                    <div class="cart__product__item__title">
-                                        <h6>Zip-pockets pebbled tote briefcase</h6>
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="cart__price">$ 170.0</td>
-                                <td class="cart__quantity">
-                                    <div class="pro-qty">
-                                        <input type="text" value="1">
-                                    </div>
-                                </td>
-                                <td class="cart__total">$ 170.0</td>
-                                <td class="cart__close"><span class="icon_close"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="cart__product__item">
-                                    <img src="img/shop-cart/cp-3.jpg" alt="" loading="lazy" decoding="async">
-                                    <div class="cart__product__item__title">
-                                        <h6>Black jean</h6>
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="cart__price">$ 85.0</td>
-                                <td class="cart__quantity">
-                                    <div class="pro-qty">
-                                        <input type="text" value="1">
-                                    </div>
-                                </td>
-                                <td class="cart__total">$ 170.0</td>
-                                <td class="cart__close"><span class="icon_close"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="cart__product__item">
-                                    <img src="img/shop-cart/cp-4.jpg" alt="" loading="lazy" decoding="async">
-                                    <div class="cart__product__item__title">
-                                        <h6>Cotton Shirt</h6>
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="cart__price">$ 55.0</td>
-                                <td class="cart__quantity">
-                                    <div class="pro-qty">
-                                        <input type="text" value="1">
-                                    </div>
-                                </td>
-                                <td class="cart__total">$ 110.0</td>
-                                <td class="cart__close"><span class="icon_close"></span></td>
-                            </tr>
+                            @if (Model != null && Model.Any())
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr id="row-@item.product.id" class="cart-row cart-row-border" data-item-id="@item.id">
+                                        <td class="cart__product__item col-prod">
+                                            <div class="cart-product-wrapper">
+                                                <img src="@item.product.image_url" alt="@item.product.name" loading="lazy" />
+                                                <div class="cart__product__item__title">
+                                                    <h6>@item.product.name</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="cart__price item-price col-price" data-price="@item.product.price">
+                                            $ @item.product.price.ToString("F2")
+                                        </td>
+                                        <td class="cart__quantity col-qty">
+                                            <div class="pro-qty">
+                                                <input type="text"
+                                                       class="qty-input form-control text-center qty-input-width"
+                                                       value="@item.quantity"
+                                                       data-max="@item.product.quantity">
+                                            </div>
+                                        </td>
+                                        <td class="cart__total item-total col-total">
+                                            $ @((item.product.price * item.quantity).ToString("F2"))
+                                        </td>
+                                        <td class="col-size">
+                                            <select class="form-control size-select cart-input-style">
+                                                @foreach (var s in item.product.size)
+                                                {
+                                                    <option value="@s.Id">@s.size</option>
+                                                }
+                                            </select>
+                                        </td>
+                                        <td class="col-color">
+                                            <select class="form-control color-select cart-input-style">
+                                                @foreach (var c in item.product.colors)
+                                                {
+                                                    <option value="@c.Id">@c.color</option>
+                                                }
+                                            </select>
+                                        </td>
+                                        <td class="cart__close col-action">
+                                            <a href="javascript:void(0)"
+                                               class="remove-cart-item btn-remove-item"
+                                               data-id="@item.product.id"
+                                               title="Remove item">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="7" class="text-center empty-cart-msg">Your shopping cart is currently empty.</td>
+                                </tr>
+                            }
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-        <div class="row">
+
+        <div class="row margin-top-sm">
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="cart__btn">
-                    <a href="#">Continue Shopping</a>
+                    <a href="/">Continue Shopping</a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="cart__btn update__btn">
-                    <a href="#"><i class="fa-solid fa-rotate"></i> Update cart</a>
+                    <a href="javascript:void(0)" id="force-update-cart"><i class="fa-solid fa-rotate"></i> Update cart</a>
                 </div>
             </div>
         </div>
-        <div class="row">
+
+        <div class="row margin-top-md">
             <div class="col-lg-6">
                 <div class="discount__content">
                     <h6>Discount codes</h6>
@@ -155,13 +263,125 @@
                 <div class="cart__total__procced">
                     <h6>Cart total</h6>
                     <ul>
-                        <li>Subtotal <span>$ 750.0</span></li>
-                        <li>Total <span>$ 750.0</span></li>
+                        <li>Subtotal <span id="subtotal">$ @totalCartPrice.ToString("F2")</span></li>
+                        <li>Total <span id="total">$ @totalCartPrice.ToString("F2")</span></li>
                     </ul>
-                    <a href="#" class="primary-btn">Proceed to checkout</a>
+
+                    <div id="checkout-btn-container">
+                        @if (Model != null && Model.Any())
+                        {
+                            <a href="/checkout" class="primary-btn">Proceed to checkout</a>
+                        }
+                        else
+                        {
+                            <p class="text-danger">Your cart is currently empty.</p>
+                            <a href="/" class="primary-btn">Browse Products</a>
+                        }
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Shop Cart Section End -->
+
+<script>
+    $(function () {
+    toastr.options = {
+    progressBar: true,
+    closeButton: true,
+    positionClass: "toast-top-right",
+    timeOut: 3000
+    };
+
+    
+    $(".remove-cart-item").click(function () {
+    var btn = $(this);
+    var productId = btn.data("id");
+
+    $.ajax({
+    url: "/shop_cart/AddToCart",
+    type: "POST",
+    data: { productId: productId },
+    success: function (res) {
+    if (res.success) {
+    $("#row-" + productId).fadeOut(400, function () {
+    $(this).remove();
+    updateCartGrandTotal();
+    if (typeof updateCartCount === "function") {
+    updateCartCount();
+    }
+    });
+    toastr.warning(res.message);
+    }
+    }
+    });
+    });
+
+    
+    function updateCartGrandTotal() {
+    var grandTotal = 0;
+    var rowsCount = $("#cart-items .cart-row").length;
+
+    $(".item-total").each(function () {
+    grandTotal += parseFloat($(this).text().replace("$", "").trim()) || 0;
+    });
+
+    $("#subtotal").text("$ " + grandTotal.toFixed(2));
+    $("#total").text("$ " + grandTotal.toFixed(2));
+
+    if (rowsCount === 0) {
+    $("#cart-items").html('<tr><td colspan="7" class="text-center empty-cart-msg">Your shopping cart is currently empty.</td></tr>');
+    $("#checkout-btn-container").html('<p class="text-danger">Your cart is currently empty.</p><a href="/" class="primary-btn">Browse Products</a>');
+    }
+    }
+
+    
+    function updateQuantityInDatabase(cartItemId, newQty) {
+    $.ajax({
+    url: "/shop_cart/UpdateQuantity",
+    type: "POST",
+    data: { cartItemId: cartItemId, quantity: newQty },
+    success: function (res) {
+    if (!res.success) {
+    toastr.error(res.message || "حدث خطأ أثناء تحديث الكمية.");
+    }
+    },
+    error: function() {
+    toastr.error("فشل الاتصال بالسيرفر لتحديث الكمية.");
+    }
+    });
+    }
+
+    
+    $(document).on("click", ".qtybtn", function () {
+    var btn = $(this);
+
+    setTimeout(function () {
+    var row = btn.closest(".cart-row");
+    var cartItemId = row.data("item-id");
+    var input = row.find(".qty-input");
+    var quantity = parseInt(input.val());
+    var maxQuantity = parseInt(input.data("max"));
+
+    if (isNaN(quantity) || quantity < 1) {
+    quantity = 1;
+    input.val(1);
+    }
+
+    if (quantity > maxQuantity) {
+    quantity = maxQuantity;
+    input.val(maxQuantity);
+    toastr.error("لم يتوفر في المخزن غير " + maxQuantity + " قطعة");
+    }
+
+    var price = parseFloat(row.find(".item-price").data("price"));
+    var total = quantity * price;
+    row.find(".item-total").text("$ " + total.toFixed(2));
+
+    updateCartGrandTotal();
+    updateQuantityInDatabase(cartItemId, quantity);
+
+    }, 50);
+    });
+    });
+</script>

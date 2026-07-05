@@ -26,6 +26,14 @@ namespace project_MVC
             builder.Services.AddScoped<ICategoryitemReposatory, CategoryitemReposatory>();
             builder.Services.AddScoped<ICategoryitemService, CategoryitemService>();
 
+            // Kabouh
+            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+            builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<IShopCartRepository, ShopCartRepository>();
+            builder.Services.AddScoped<IShopCartService, ShopCartService>();
+            builder.Services.AddScoped<ICheckoutService, CheckoutService>();
+
+
             var app = builder.Build();
 
             if (!app.Environment.IsDevelopment())

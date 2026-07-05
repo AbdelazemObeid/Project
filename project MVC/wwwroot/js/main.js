@@ -1118,3 +1118,20 @@ if ($(this).hasClass('inc')) {
     if (oldValue > min)
         oldValue--;
 }
+
+
+
+$(".price-range").slider({
+    range: true,
+    min: 699,
+    max: 3000,
+    values: [699, 3000],
+    slide: function (event, ui) {
+        $("#minamount").val(ui.values[0]);
+        $("#maxamount").val(ui.values[1]);
+    },
+    // 🔥 ضِف السطرين دول هنا
+    stop: function (event, ui) {
+        document.getElementById('filterForm').submit();
+    }
+});

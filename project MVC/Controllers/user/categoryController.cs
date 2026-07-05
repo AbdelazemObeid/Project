@@ -1,21 +1,40 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using project_MVC.data;
+using project_MVC.Service;
+using project_MVC.ViewModels;
+using System.Collections.Generic;
 
 namespace project_MVC.Controllers.user
 {
     public class categoryController : Controller
     {
-        private readonly Project_context context;
-        public categoryController(Project_context _context)
+        private readonly ICategoryService _categoryService;
+
+        public categoryController(ICategoryService categoryService)
         {
-            context = _context;
+            _categoryService = categoryService;
         }
-        public IActionResult Index(int categoryId)
+
+        public IActionResult Index(
+            int categoryId,
+            List<int>? subCategoryIds,
+            decimal? minPrice,
+            decimal? maxPrice,
+            List<string>? sizes,
+            List<string>? colors,
+            string? sort)
         {
-            var categories = context.Categories.OrderBy(c => c.id).ToList();
-            ViewBag.categories = categories;
-            return View("~/views/user/category/category.cshtml");
+            CategoryVM vm = _categoryService.GetCategoryPageViewModel(
+                categoryId, subCategoryIds, minPrice, maxPrice, sizes, colors, sort);
+
+            ViewBag.categories = _categoryService.getAll();
+
+            var currentCategory = _categoryService.getById(categoryId);
+            ViewBag.CategoryName = currentCategory?.name;
+
+            int currentUserId = 1;
+            ViewBag.ProductIdsInCart = _categoryService.GetCartProductIdsForUser(currentUserId);
+
+            return View("~/views/user/category/category.cshtml", vm);
         }
     }
 }
