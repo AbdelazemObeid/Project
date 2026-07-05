@@ -1,0 +1,49 @@
+@model project_MVC.Models.User
+@{
+    ViewData["Title"] = "Edit User";
+    ViewData["ActivePage"] = "Users";
+    Layout = "~/Views/Shared/admin/_adminlayout.cshtml";
+}
+
+<section class="content-section active">
+    <div class="section-header">
+        <h1>Edit User</h1>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <form asp-action="Edit" asp-controller="AdminUsers" asp-route-id="@Model.id" method="post">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input asp-for="name" class="form-control" />
+                    <span asp-validation-for="name" style="color: red; font-size: 0.9em;"></span>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input asp-for="email" class="form-control" />
+                    <span asp-validation-for="email" style="color: red; font-size: 0.9em;"></span>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input asp-for="phone_number" class="form-control" />
+                    <span asp-validation-for="phone_number" style="color: red; font-size: 0.9em;"></span>
+                </div>
+                <div class="form-group">
+                    <label>Password (Leave blank to keep current)</label>
+                    <input type="password" name="password" class="form-control" />
+                    <!-- No validation for password on edit to allow empty -->
+                </div>
+                <div class="form-group">
+                    <label>Role</label>
+                    <select asp-for="role" class="form-control">
+                        <option value="Subscriber">Subscriber</option>
+                        <option value="Editor">Editor</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+                    <span asp-validation-for="role" style="color: red; font-size: 0.9em;"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Update User</button>
+                <a href="/admin/users" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </div>
+</section>
