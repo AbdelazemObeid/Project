@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "View Statistics";
+    ViewData["ActivePage"] = "Statistics";
+    Layout = "~/Views/Shared/admin/_adminlayout.cshtml";
+}
+
+<section id="section-statistics" class="content-section active">
+    <div class="section-header">
+        <h1>View Statistics</h1>
+        <p>Overview of site activities.</p>
+    </div>
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-icon bg-primary"><i class="fa-solid fa-file-lines"></i></div>
+            <div class="stat-details">
+                <h3>Total Posts</h3>
+                <p class="stat-num" id="stat-posts">45</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon bg-success"><i class="fa-solid fa-eye"></i></div>
+            <div class="stat-details">
+                <h3>Page Views</h3>
+                <p class="stat-num" id="stat-views">12.4K</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon bg-warning"><i class="fa-solid fa-users"></i></div>
+            <div class="stat-details">
+                <h3>Total Users</h3>
+                <p class="stat-num" id="stat-users">150</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon bg-danger"><i class="fa-solid fa-comment"></i></div>
+            <div class="stat-details">
+                <h3>Comments</h3>
+                <p class="stat-num" id="stat-comments">320</p>
+            </div>
+        </div>
+    </div>
+</section>

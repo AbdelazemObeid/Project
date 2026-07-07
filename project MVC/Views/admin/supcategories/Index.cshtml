@@ -1,0 +1,58 @@
+@model List<project_MVC.Models.Sup_category>
+@{
+    ViewData["Title"] = "Manage SubCategories";
+    ViewData["ActivePage"] = "SupCategories";
+    Layout = "~/Views/Shared/admin/_adminlayout.cshtml";
+}
+
+<section class="content-section active">
+    <div class="section-header flex-between">
+        <div>
+            <h1>Manage SubCategories</h1>
+            <p>View and manage product subcategories</p>
+        </div>
+        <a href="/admin/supcategories/create" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add SubCategory</a>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            @if (TempData["Error"] != null)
+            {
+                <div style="background:#f8d7da; color:#721c24; padding:10px; margin-bottom:15px; border-radius:5px;">
+                    <strong>&#9888; Error:</strong> @TempData["Error"]
+                </div>
+            }
+            @if (TempData["Success"] != null)
+            {
+                <div style="background:#d4edda; color:#155724; padding:10px; margin-bottom:15px; border-radius:5px;">
+                    <strong>&#10004; Success:</strong> @TempData["Success"]
+                </div>
+            }
+
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var sub in Model)
+                        {
+                            <tr>
+                                <td>#@sub.Id</td>
+                                <td><strong>@sub.Name</strong></td>
+                                <td style="display: flex; gap: 5px;">
+                                    <a href="/admin/supcategories/details/@sub.Id" class="btn-icon btn-info" style="margin-right: 5px; color: white; background: #17a2b8; padding: 8px; border-radius: 4px; text-decoration: none;"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="/admin/supcategories/edit/@sub.Id" class="btn-icon btn-edit"><i class="fa-solid fa-pen"></i></a>
+                                    <a href="/admin/supcategories/delete/@sub.Id" class="btn-icon btn-delete" style="margin-right: 5px; color: white; background: #ff4d4d; padding: 8px; border-radius: 4px; text-decoration: none;"><i class="fa-solid fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

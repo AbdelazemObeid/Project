@@ -1,0 +1,46 @@
+@model project_MVC.Models.Sup_category
+@{
+    ViewData["Title"] = "SubCategory Details";
+    ViewData["ActivePage"] = "SupCategories";
+    Layout = "~/Views/Shared/admin/_adminlayout.cshtml";
+}
+
+<section class="content-section active">
+    <div class="section-header flex-between">
+        <h1>SubCategory Details</h1>
+        <a href="/admin/supcategories" class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i> Back to SubCategories</a>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>@Model.Name</h2>
+                    
+                    <table class="table table-bordered mt-4" style="max-width: 500px;">
+                        <tbody>
+                            <tr>
+                                <th style="width: 30%">ID</th>
+                                <td>#@Model.Id</td>
+                            </tr>
+                            <tr>
+                                <th>Name</th>
+                                <td>@Model.Name</td>
+                            </tr>
+                            <tr>
+                                <th>Total Products</th>
+                                <td>@(Model.products?.Count ?? 0)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="mt-4">
+                        <a href="/admin/supcategories/edit/@Model.Id" class="btn btn-warning"><i class="fa-solid fa-pen"></i> Edit</a>
+                        <form action="/admin/supcategories/delete/@Model.Id" method="post" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this subcategory?')">
+                            <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
