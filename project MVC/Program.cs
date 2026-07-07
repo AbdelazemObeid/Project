@@ -26,6 +26,9 @@ namespace project_MVC
             builder.Services.AddScoped<ICategoryitemReposatory, CategoryitemReposatory>();
             builder.Services.AddScoped<ICategoryitemService, CategoryitemService>();
 
+            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+            builder.Services.AddScoped<ICategoryService, CategoryService>();
+
             builder.Services.AddScoped<Ifavouritereposatory, favouritereposatory>();
             builder.Services.AddScoped<Ifavouriteservice, favouriteservice>();
 

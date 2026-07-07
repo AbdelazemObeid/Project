@@ -1,7 +1,6 @@
 // admin-main.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    localStorage.setItem('admin_site_logged_in', 'true');
     // === Session Dummy Check ===
     const isLoginPage = document.getElementById('loginForm') !== null;
     const isLoggedIn = localStorage.getItem('admin_site_logged_in') === 'true';

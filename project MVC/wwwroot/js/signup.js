@@ -6,5 +6,5 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
 
     // مثال مؤقت لتسجيل حساب (يمكن الربط بالباك إند لاحقًا)
     alert(`تم إنشاء الحساب بنجاح!\nالاسم: ${name}\nالبريد: ${email}`);
-    window.location.href = "login.html"; // تحويل المستخدم لتسجيل الدخول بعد إنشاء الحساب
+    window.location.href = "/login"; // تحويل المستخدم لتسجيل الدخول بعد إنشاء الحساب
 });
