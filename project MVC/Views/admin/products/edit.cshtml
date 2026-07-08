@@ -1,0 +1,225 @@
+@model project_MVC.Models.Product
+@{
+    ViewData["Title"] = "Edit Product";
+    ViewData["ActivePage"] = "Products";
+    Layout = "~/Views/Shared/admin/_adminlayout.cshtml";
+
+    var currentColors = Model.colors != null ? string.Join(", ", Model.colors.Select(c => c.color)) : "";
+    var currentSizes  = Model.size != null   ? string.Join(", ", Model.size.Select(s => s.size))   : "";
+    var images        = Model.productimages?.ToList() ?? new List<project_MVC.Models.productimage>();
+    var img1 = Model.image_url ?? "";
+    var img2 = images.Count > 0 ? images[0].image_url : "";
+    var img3 = images.Count > 1 ? images[1].image_url : "";
+    var img4 = images.Count > 2 ? images[2].image_url : "";
+}
+
+<section class="content-section active">
+
+    <!-- Page Header -->
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:28px;">
+        <div>
+            <h1 style="font-size:1.7rem; font-weight:700; color:#1a1a2e; margin:0;">✏️ Edit Product</h1>
+            <p style="color:#6b7280; margin:5px 0 0 0; font-size:0.92rem;">Editing: <strong>@Model.name</strong> (ID: #@Model.id)</p>
+        </div>
+        <a href="/admin/products" class="product-btn-cancel">← Back to Products</a>
+    </div>
+
+    @if (ViewBag.ValidationErrors != null)
+    {
+        <div style="background:#fee2e2; color:#991b1b; padding:14px 18px; margin-bottom:22px; border-radius:10px; border-left:5px solid #ef4444; font-size:0.9rem;">
+            <strong>⚠️ Error:</strong> @ViewBag.ValidationErrors
+        </div>
+    }
+
+    <form action="/admin/products/edit/@Model.id" method="post">
+        <input type="hidden" name="id" value="@Model.id" />
+
+        <div class="product-form-grid">
+
+            <!-- ===== LEFT COLUMN ===== -->
+            <div>
+                <!-- Basic Info -->
+                <div class="product-info-card">
+                    <h3 class="product-card-title">
+                        <span class="product-card-num" style="background:#4f46e5;">1</span>
+                        Basic Information
+                    </h3>
+
+                    <div class="product-field">
+                        <label>Product Name *</label>
+                        <input type="text" name="name" class="product-input" value="@Model.name" required placeholder="e.g., Classic Denim Jacket" />
+                    </div>
+
+                    <div class="product-field-row">
+                        <div>
+                            <label style="display:block; font-size:0.84rem; font-weight:600; color:#374151; margin-bottom:7px;">Price (EGP) *</label>
+                            <input type="number" name="price" class="product-input" value="@Model.price" required />
+                        </div>
+                        <div>
+                            <label style="display:block; font-size:0.84rem; font-weight:600; color:#374151; margin-bottom:7px;">Quantity *</label>
+                            <input type="number" name="quantity" class="product-input" value="@Model.quantity" required />
+                        </div>
+                    </div>
+
+                    <div class="product-field-row">
+                        <div>
+                            <label style="display:block; font-size:0.84rem; font-weight:600; color:#374151; margin-bottom:7px;">Category *</label>
+                            <select name="category_id" class="product-input" style="cursor:pointer;">
+                                @foreach (var cat in (List<project_MVC.Models.Category>)ViewBag.Categories)
+                                {
+                                    if (cat.id == Model.category_id)
+                                    {
+                                        <option value="@cat.id" selected>@cat.name</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@cat.id">@cat.name</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display:block; font-size:0.84rem; font-weight:600; color:#374151; margin-bottom:7px;">Sub-Category</label>
+                            <select name="sup_category_id" class="product-input" style="cursor:pointer;">
+                                @if (ViewBag.SupCategories != null)
+                                {
+                                    @foreach (var sub in (List<project_MVC.Models.Sup_category>)ViewBag.SupCategories)
+                                    {
+                                        if (sub.Id == Model.sup_category_id)
+                                        {
+                                            <option value="@sub.Id" selected>@sub.Name</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@sub.Id">@sub.Name</option>
+                                        }
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product-field" style="margin-bottom:0;">
+                        <label>Description</label>
+                        <textarea name="description" rows="5" class="product-input" placeholder="Enter product description...">@Model.description</textarea>
+                    </div>
+                </div>
+
+                <!-- Variants -->
+                <div class="product-info-card" style="margin-bottom:0;">
+                    <h3 class="product-card-title">
+                        <span class="product-card-num" style="background:#0ea5e9;">2</span>
+                        Variants
+                    </h3>
+                    <div class="product-field-row" style="margin-bottom:0;">
+                        <div>
+                            <label style="display:block; font-size:0.84rem; font-weight:600; color:#374151; margin-bottom:7px;">🎨 Colors</label>
+                            <input type="text" name="ColorsInput" class="product-input" value="@currentColors" placeholder="Red, Blue, Black" />
+                            <p style="font-size:0.77rem; color:#9ca3af; margin:5px 0 0 0;">Comma-separated — Replaces existing</p>
+                        </div>
+                        <div>
+                            <label style="display:block; font-size:0.84rem; font-weight:600; color:#374151; margin-bottom:7px;">📏 Sizes</label>
+                            <input type="text" name="SizesInput" class="product-input" value="@currentSizes" placeholder="S, M, L, XL" />
+                            <p style="font-size:0.77rem; color:#9ca3af; margin:5px 0 0 0;">Comma-separated — Replaces existing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== RIGHT COLUMN: Images ===== -->
+            <div>
+                <div class="product-info-card" style="margin-bottom:0; position:sticky; top:10px;">
+                    <h3 class="product-card-title">
+                        <span class="product-card-num" style="background:#f59e0b;">3</span>
+                        Product Images
+                    </h3>
+
+                    <div style="background:#fff3cd; border:1px solid #ffc107; border-left:4px solid #ffc107; color:#856404; padding:10px 14px; border-radius:6px; font-size:0.84rem; margin-bottom:16px;">
+                        ⚠️ Editing any extra image here will replace all 3 extra images in the database.
+                    </div>
+
+                    <!-- Main Image -->
+                    <div class="product-image-main">
+                        <label style="font-size:0.82rem; font-weight:700; color:#4f46e5; margin-bottom:8px; display:block;">🖼️ Main Image</label>
+                        <div class="product-image-thumb">
+                            <img id="prev1" src="@img1" alt="Main Image" 
+                                 style="max-width:100%; max-height:160px; object-fit:contain; @(string.IsNullOrEmpty(img1) ? "display:none;" : "")" 
+                                 onerror="this.style.display='none'; document.getElementById('ph1').style.display='flex';" />
+                            <div id="ph1" style="display:@(string.IsNullOrEmpty(img1) ? "flex" : "none"); flex-direction:column; align-items:center; color:#c4b5fd;">
+                                <span style="font-size:2.5rem;">📷</span>
+                                <span style="font-size:0.76rem; margin-top:4px; color:#a5b4fc;">No image yet</span>
+                            </div>
+                        </div>
+                        <input type="text" name="image_url" class="product-input" value="@img1" placeholder="Paste main image URL..."
+                               style="border-color:#ddd6fe;"
+                               oninput="updatePreview(this.value, 'prev1', 'ph1')" />
+                    </div>
+
+                    <!-- Extra Images Grid -->
+                    <p style="font-size:0.8rem; font-weight:600; color:#6b7280; margin-bottom:10px;">Additional Images (Optional)</p>
+                    <div class="product-image-grid">
+                        <div class="product-image-slot">
+                            <label style="font-size:0.75rem; font-weight:600; color:#6b7280; margin-bottom:6px; display:block;">Image 2</label>
+                            <div class="product-image-mini">
+                                <img id="prev2" src="@img2" alt="Image 2" 
+                                     style="max-width:100%; max-height:90px; object-fit:contain; @(string.IsNullOrEmpty(img2) ? "display:none;" : "")" 
+                                     onerror="this.style.display='none';" />
+                                <span id="ph2" style="font-size:1.8rem; color:#d1d5db; display:@(string.IsNullOrEmpty(img2) ? "inline" : "none");">🖼️</span>
+                            </div>
+                            <input type="text" name="ExtraImage1" class="product-input" value="@img2" placeholder="URL" style="padding:8px 10px; font-size:0.82rem;"
+                                   oninput="updatePreview(this.value, 'prev2', 'ph2')" />
+                        </div>
+                        <div class="product-image-slot">
+                            <label style="font-size:0.75rem; font-weight:600; color:#6b7280; margin-bottom:6px; display:block;">Image 3</label>
+                            <div class="product-image-mini">
+                                <img id="prev3" src="@img3" alt="Image 3" 
+                                     style="max-width:100%; max-height:90px; object-fit:contain; @(string.IsNullOrEmpty(img3) ? "display:none;" : "")" 
+                                     onerror="this.style.display='none';" />
+                                <span id="ph3" style="font-size:1.8rem; color:#d1d5db; display:@(string.IsNullOrEmpty(img3) ? "inline" : "none");">🖼️</span>
+                            </div>
+                            <input type="text" name="ExtraImage2" class="product-input" value="@img3" placeholder="URL" style="padding:8px 10px; font-size:0.82rem;"
+                                   oninput="updatePreview(this.value, 'prev3', 'ph3')" />
+                        </div>
+                    </div>
+                    <div class="product-image-slot" style="margin-top:0;">
+                        <label style="font-size:0.75rem; font-weight:600; color:#6b7280; margin-bottom:6px; display:block;">Image 4</label>
+                        <div class="product-image-mini">
+                            <img id="prev4" src="@img4" alt="Image 4" 
+                                 style="max-width:100%; max-height:90px; object-fit:contain; @(string.IsNullOrEmpty(img4) ? "display:none;" : "")" 
+                                 onerror="this.style.display='none';" />
+                            <span id="ph4" style="font-size:1.8rem; color:#d1d5db; display:@(string.IsNullOrEmpty(img4) ? "inline" : "none");">🖼️</span>
+                        </div>
+                        <input type="text" name="ExtraImage3" class="product-input" value="@img4" placeholder="Image URL" style="padding:8px 10px; font-size:0.82rem;"
+                               oninput="updatePreview(this.value, 'prev4', 'ph4')" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Save Bar -->
+        <div class="product-save-bar">
+            <button type="submit" class="product-btn-save">💾 Update Product</button>
+            <a href="/admin/products" class="product-btn-cancel">Cancel</a>
+        </div>
+    </form>
+
+</section>
+
+<script>
+    function updatePreview(url, imgId, phId) {
+        var img = document.getElementById(imgId);
+        var ph = document.getElementById(phId);
+        if (url && url.trim() !== '') {
+            img.src = url.trim();
+            img.style.display = 'block';
+            if (ph) ph.style.display = 'none';
+            img.onerror = function () {
+                this.style.display = 'none';
+                if (ph) ph.style.display = ph.tagName === 'SPAN' ? 'inline' : 'flex';
+            };
+        } else {
+            img.style.display = 'none';
+            if (ph) ph.style.display = ph.tagName === 'SPAN' ? 'inline' : 'flex';
+        }
+    }
+</script>

@@ -1,0 +1,192 @@
+@model project_MVC.Models.Product
+@{
+    ViewData["Title"] = "Add Product";
+    ViewData["ActivePage"] = "Products";
+    Layout = "~/Views/Shared/admin/_adminlayout.cshtml";
+}
+
+<section class="content-section active">
+
+    <!-- Page Header -->
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:28px;">
+        <div>
+            <h1 style="font-size:1.7rem; font-weight:700; color:#1a1a2e; margin:0;">➕ Add New Product</h1>
+            <p style="color:#6b7280; margin:5px 0 0 0; font-size:0.92rem;">Fill in the details to add a new product.</p>
+        </div>
+        <a href="/admin/products" class="product-btn-cancel">← Back to Products</a>
+    </div>
+
+    @if (ViewBag.ValidationErrors != null)
+    {
+        <div style="background:#fee2e2; color:#991b1b; padding:14px 18px; margin-bottom:22px; border-radius:10px; border-left:5px solid #ef4444; font-size:0.9rem;">
+            <strong>⚠️ Error:</strong> @ViewBag.ValidationErrors
+        </div>
+    }
+
+    <form asp-action="Create" asp-controller="AdminProducts" method="post">
+
+        <div class="product-form-grid">
+
+            <!-- ===== LEFT COLUMN ===== -->
+            <div>
+                <!-- Basic Info -->
+                <div class="product-info-card">
+                    <h3 class="product-card-title">
+                        <span class="product-card-num" style="background:#4f46e5;">1</span>
+                        Basic Information
+                    </h3>
+
+                    <div class="product-field">
+                        <label>Product Name *</label>
+                        <input asp-for="name" class="product-input" placeholder="e.g., Classic Denim Jacket" />
+                        <span asp-validation-for="name" style="color:#ef4444; font-size:0.8rem;"></span>
+                    </div>
+
+                    <div class="product-field-row">
+                        <div>
+                            <label style="display:block; font-size:0.84rem; font-weight:600; color:#374151; margin-bottom:7px;">Price (EGP) *</label>
+                            <input asp-for="price" type="number" class="product-input" placeholder="0" />
+                            <span asp-validation-for="price" style="color:#ef4444; font-size:0.8rem;"></span>
+                        </div>
+                        <div>
+                            <label style="display:block; font-size:0.84rem; font-weight:600; color:#374151; margin-bottom:7px;">Quantity *</label>
+                            <input asp-for="quantity" type="number" class="product-input" placeholder="0" />
+                        </div>
+                    </div>
+
+                    <div class="product-field-row">
+                        <div>
+                            <label style="display:block; font-size:0.84rem; font-weight:600; color:#374151; margin-bottom:7px;">Category *</label>
+                            <select asp-for="category_id" class="product-input" style="cursor:pointer;">
+                                @foreach (var cat in (List<project_MVC.Models.Category>)ViewBag.Categories)
+                                {
+                                    <option value="@cat.id">@cat.name</option>
+                                }
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display:block; font-size:0.84rem; font-weight:600; color:#374151; margin-bottom:7px;">Sub-Category</label>
+                            <select name="sup_category_id" class="product-input" style="cursor:pointer;">
+                                @if (ViewBag.SupCategories != null)
+                                {
+                                    @foreach (var sub in (List<project_MVC.Models.Sup_category>)ViewBag.SupCategories)
+                                    {
+                                        <option value="@sub.Id">@sub.Name</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product-field" style="margin-bottom:0;">
+                        <label>Description</label>
+                        <textarea asp-for="description" rows="4" class="product-input" placeholder="Enter product description..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Variants -->
+                <div class="product-info-card" style="margin-bottom:0;">
+                    <h3 class="product-card-title">
+                        <span class="product-card-num" style="background:#0ea5e9;">2</span>
+                        Variants
+                    </h3>
+                    <div class="product-field-row" style="margin-bottom:0;">
+                        <div>
+                            <label style="display:block; font-size:0.84rem; font-weight:600; color:#374151; margin-bottom:7px;">🎨 Colors</label>
+                            <input type="text" name="ColorsInput" class="product-input" placeholder="Red, Blue, Black" />
+                            <p style="font-size:0.77rem; color:#9ca3af; margin:5px 0 0 0;">Comma-separated</p>
+                        </div>
+                        <div>
+                            <label style="display:block; font-size:0.84rem; font-weight:600; color:#374151; margin-bottom:7px;">📏 Sizes</label>
+                            <input type="text" name="SizesInput" class="product-input" placeholder="S, M, L, XL" />
+                            <p style="font-size:0.77rem; color:#9ca3af; margin:5px 0 0 0;">Comma-separated</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== RIGHT COLUMN: Images ===== -->
+            <div>
+                <div class="product-info-card" style="margin-bottom:0; position:sticky; top:10px;">
+                    <h3 class="product-card-title">
+                        <span class="product-card-num" style="background:#f59e0b;">3</span>
+                        Product Images
+                    </h3>
+
+                    <!-- Main Image -->
+                    <div class="product-image-main">
+                        <label style="font-size:0.82rem; font-weight:700; color:#4f46e5; margin-bottom:8px; display:block;">🖼️ Main Image</label>
+                        <div class="product-image-thumb">
+                            <img id="prev1" src="" alt="" style="max-width:100%; max-height:160px; object-fit:contain; display:none;" onerror="this.style.display='none'; document.getElementById('ph1').style.display='flex';" />
+                            <div id="ph1" style="display:flex; flex-direction:column; align-items:center; color:#c4b5fd;">
+                                <span style="font-size:2.5rem;">📷</span>
+                                <span style="font-size:0.76rem; margin-top:4px; color:#a5b4fc;">No image yet</span>
+                            </div>
+                        </div>
+                        <input type="text" name="image_url" class="product-input" placeholder="Paste main image URL..."
+                               style="border-color:#ddd6fe;"
+                               oninput="updatePreview(this.value, 'prev1', 'ph1')" />
+                    </div>
+
+                    <!-- Extra Images Grid -->
+                    <p style="font-size:0.8rem; font-weight:600; color:#6b7280; margin-bottom:10px;">Additional Images (Optional)</p>
+                    <div class="product-image-grid">
+                        <div class="product-image-slot">
+                            <label style="font-size:0.75rem; font-weight:600; color:#6b7280; margin-bottom:6px; display:block;">Image 2</label>
+                            <div class="product-image-mini">
+                                <img id="prev2" src="" alt="" style="max-width:100%; max-height:90px; object-fit:contain; display:none;" onerror="this.style.display='none';" />
+                                <span id="ph2" style="font-size:1.8rem; color:#d1d5db;">🖼️</span>
+                            </div>
+                            <input type="text" name="ExtraImage1" class="product-input" placeholder="URL" style="padding:8px 10px; font-size:0.82rem;"
+                                   oninput="updatePreview(this.value, 'prev2', 'ph2')" />
+                        </div>
+                        <div class="product-image-slot">
+                            <label style="font-size:0.75rem; font-weight:600; color:#6b7280; margin-bottom:6px; display:block;">Image 3</label>
+                            <div class="product-image-mini">
+                                <img id="prev3" src="" alt="" style="max-width:100%; max-height:90px; object-fit:contain; display:none;" onerror="this.style.display='none';" />
+                                <span id="ph3" style="font-size:1.8rem; color:#d1d5db;">🖼️</span>
+                            </div>
+                            <input type="text" name="ExtraImage2" class="product-input" placeholder="URL" style="padding:8px 10px; font-size:0.82rem;"
+                                   oninput="updatePreview(this.value, 'prev3', 'ph3')" />
+                        </div>
+                    </div>
+                    <div class="product-image-slot" style="margin-top:0;">
+                        <label style="font-size:0.75rem; font-weight:600; color:#6b7280; margin-bottom:6px; display:block;">Image 4</label>
+                        <div class="product-image-mini">
+                            <img id="prev4" src="" alt="" style="max-width:100%; max-height:90px; object-fit:contain; display:none;" onerror="this.style.display='none';" />
+                            <span id="ph4" style="font-size:1.8rem; color:#d1d5db;">🖼️</span>
+                        </div>
+                        <input type="text" name="ExtraImage3" class="product-input" placeholder="Image URL" style="padding:8px 10px; font-size:0.82rem;"
+                               oninput="updatePreview(this.value, 'prev4', 'ph4')" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Save Bar -->
+        <div class="product-save-bar">
+            <button type="submit" class="product-btn-save">💾 Save Product</button>
+            <a href="/admin/products" class="product-btn-cancel">Cancel</a>
+        </div>
+    </form>
+
+</section>
+
+<script>
+    function updatePreview(url, imgId, phId) {
+        var img = document.getElementById(imgId);
+        var ph = document.getElementById(phId);
+        if (url && url.trim() !== '') {
+            img.src = url.trim();
+            img.style.display = 'block';
+            if (ph) ph.style.display = 'none';
+            img.onerror = function () {
+                this.style.display = 'none';
+                if (ph) ph.style.display = ph.tagName === 'SPAN' ? 'inline' : 'flex';
+            };
+        } else {
+            img.style.display = 'none';
+            if (ph) ph.style.display = ph.tagName === 'SPAN' ? 'inline' : 'flex';
+        }
+    }
+</script>

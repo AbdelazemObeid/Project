@@ -1,0 +1,28 @@
+@model project_MVC.Models.Sup_category
+@{
+    ViewData["Title"] = "Edit SubCategory";
+    ViewData["ActivePage"] = "SupCategories";
+    Layout = "~/Views/Shared/admin/_adminlayout.cshtml";
+}
+
+<section class="content-section active">
+    <div class="section-header">
+        <h1>Edit SubCategory: @Model.Name</h1>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <form asp-action="Edit" asp-controller="AdminSupCategories" method="post">
+                <input type="hidden" asp-for="Id" />
+                
+                <div class="form-group">
+                    <label>SubCategory Name</label>
+                    <input asp-for="Name" class="form-control" required />
+                    <span asp-validation-for="Name" style="color: red; font-size: 0.9em;"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="margin-top:10px;">Save Changes</button>
+                <a href="/admin/supcategories" class="btn btn-secondary" style="margin-top:10px;">Cancel</a>
+            </form>
+        </div>
+    </div>
+</section>
