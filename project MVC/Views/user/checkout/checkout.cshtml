@@ -1,0 +1,697 @@
+﻿@model IEnumerable<project_MVC.Models.Cart_item>
+
+@{
+    Layout = "~/Views/Shared/user/_userlayout.cshtml";
+
+    decimal totalOrderPrice = Model?.Where(item => item.product != null).Sum(item => item.product.price * item.quantity) ?? 0;
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    .toast-container {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 10000;
+        display: none;
+    }
+
+    .custom-toast {
+        background-color: #10b981;
+        color: white;
+        padding: 16px 24px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        display: flex;
+        flex-direction: column;
+        min-width: 300px;
+        position: relative;
+        overflow: hidden;
+        animation: slideIn 0.3s ease-out;
+    }
+
+    .toast-content {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    .toast-progress {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 100%;
+        animation: progressCount 4s linear forwards;
+    }
+
+    @@keyframes slideIn {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @@keyframes progressCount {
+        from {
+            width: 100%;
+        }
+
+        to {
+            width: 0%;
+        }
+    }
+
+    .payment-methods-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .payment-card-option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        background: #fff;
+        position: relative;
+    }
+
+        .payment-card-option:hover {
+            border-color: #ca1515;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(202, 21, 21, 0.08);
+        }
+
+        .payment-card-option input[type="radio"] {
+            display: none;
+        }
+        /* عند اختيار الكارت */
+        .payment-card-option.active {
+            border-color: #ca1515;
+            background-color: #fffafb;
+        }
+
+    .payment-card-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .payment-icon-wrapper {
+        width: 45px;
+        height: 45px;
+        border-radius: 8px;
+        background: #f9fafb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: #4b5563;
+        transition: all 0.2s;
+    }
+
+    .payment-card-option.active .payment-icon-wrapper {
+        background: #ca1515;
+        color: #fff;
+    }
+
+    .payment-text-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .payment-title {
+        font-weight: 600;
+        font-size: 15px;
+        color: #1f2937;
+    }
+
+    .payment-subtitle {
+        font-size: 12px;
+        color: #6b7280;
+    }
+
+    .payment-check-mark {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #d1d5db;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+    }
+
+    .payment-card-option.active .payment-check-mark {
+        border-color: #ca1515;
+        background: #ca1515;
+    }
+
+    .payment-check-mark::after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: white;
+        border-radius: 50%;
+        display: none;
+    }
+
+    .payment-card-option.active .payment-check-mark::after {
+        display: block;
+    }
+
+    .payment-modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.6);
+        backdrop-filter: blur(4px);
+    }
+
+    .modal-content {
+        background-color: #fff;
+        margin: 8% auto;
+        padding: 35px;
+        border-radius: 16px;
+        width: 90%;
+        max-width: 480px;
+        box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+        position: relative;
+        animation: modalFade 0.3s ease-out;
+    }
+
+    @@keyframes modalFade {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .close-modal {
+        position: absolute;
+        right: 25px;
+        top: 20px;
+        font-size: 22px;
+        cursor: pointer;
+        color: #9ca3af;
+        transition: color 0.2s;
+    }
+
+        .close-modal:hover {
+            color: #111827;
+        }
+
+    .modal-input {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0 16px 0;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-size: 14px;
+        transition: border-color 0.2s;
+    }
+
+        .modal-input:focus {
+            outline: none;
+            border-color: #ca1515;
+            box-shadow: 0 0 0 3px rgba(202, 21, 21, 0.1);
+        }
+
+    .modal-btn {
+        width: 100%;
+        background: #ca1515;
+        color: white;
+        border: none;
+        padding: 14px;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 8px;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background 0.2s;
+    }
+
+        .modal-btn:hover {
+            background: #b11010;
+        }
+
+    .input-error {
+        color: #ca1515;
+        font-size: 12px;
+        display: none;
+        margin-top: -12px;
+        margin-bottom: 12px;
+        font-weight: 500;
+    }
+</style>
+
+<div class="toast-container" id="toast-box">
+    <div class="custom-toast">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-check" style="font-size: 20px;"></i>
+            <span id="toast-message">Payment Successful! Your transaction has been processed.</span>
+        </div>
+        <div class="toast-progress"></div>
+    </div>
+</div>
+
+<div class="breadcrumb-option">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb__links">
+                    <a href="/"><i class="fa-solid fa-house"></i> Home</a>
+                    <span>Checkout</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="checkout spad">
+    <div class="container">
+        <form action="#" class="checkout__form" id="checkout-form" novalidate>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h5 id="billing-heading">Billing Details</h5>
+                    <fieldset aria-labelledby="billing-heading">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="checkout__form__input">
+                                    <label for="country">Country <span aria-hidden="true">*</span></label>
+                                    <select id="country" name="country" required aria-required="true" autocomplete="country-name">
+                                        <option value="">Select Governorate</option>
+                                        <option value="Cairo">Cairo</option>
+                                        <option value="Giza">Giza</option>
+                                        <option value="Alexandria">Alexandria</option>
+                                        <option value="Dakahlia">Dakahlia</option>
+                                        <option value="RedSea">Red Sea</option>
+                                        <option value="Beheira">Beheira</option>
+                                        <option value="Fayoum">Fayoum</option>
+                                        <option value="Gharbia">Gharbia</option>
+                                        <option value="Ismailia">Ismailia</option>
+                                        <option value="Monufia">Monufia</option>
+                                        <option value="Minya">Minya</option>
+                                        <option value="Qalyubia">Qalyubia</option>
+                                        <option value="NewValley">New Valley</option>
+                                        <option value="Suez">Suez</option>
+                                        <option value="Aswan">Aswan</option>
+                                        <option value="Assiut">Assiut</option>
+                                        <option value="BeniSuef">Beni Suef</option>
+                                        <option value="PortSaid">Port Said</option>
+                                        <option value="Damietta">Damietta</option>
+                                        <option value="Sharkia">Sharkia</option>
+                                        <option value="SouthSinai">South Sinai</option>
+                                        <option value="KafrElSheikh">Kafr El Sheikh</option>
+                                        <option value="Matrouh">Matrouh</option>
+                                        <option value="Luxor">Luxor</option>
+                                        <option value="Qena">Qena</option>
+                                        <option value="NorthSinai">North Sinai</option>
+                                        <option value="Sohag">Sohag</option>
+                                    </select>
+                                    <span class="error-message" role="alert" aria-live="polite"></span>
+                                </div>
+                                <div class="checkout__form__input">
+                                    <label for="city">Town/City <span aria-hidden="true">*</span></label>
+                                    <input type="text" id="city" name="city" required aria-required="true" autocomplete="address-level2">
+                                    <span class="error-message" role="alert" aria-live="polite"></span>
+                                </div>
+                                <div class="checkout__form__input">
+                                    <label for="address-street">Street Address <span aria-hidden="true">*</span></label>
+                                    <input type="text" id="address-street" name="addressStreet" required aria-required="true" autocomplete="address-line1" placeholder="Street Address">
+                                    <span class="error-message" role="alert" aria-live="polite"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="checkout__form__checkbox">
+                                    <label for="add-order-note">
+                                        Add a note to your order
+                                        <input type="checkbox" id="add-order-note" name="addOrderNote" aria-controls="order-notes-group">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="checkout__form__input" id="order-notes-group" hidden>
+                                    <label for="order-notes">Order Notes</label>
+                                    <textarea id="order-notes" name="orderNotes" rows="4" placeholder="Notes about your order, e.g., special instructions for delivery"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="checkout__order">
+                        <h5>Your order</h5>
+                        <div class="checkout__order__product">
+                            <ul id="checkout-products-list">
+                                <li>
+                                    <span class="top__text">Product</span>
+                                    <span class="top__text__right">Total</span>
+                                </li>
+
+                                @if (Model != null && Model.Any())
+                                {
+                                    int counter = 1;
+                                    foreach (var item in Model)
+                                    {
+                                        if (item.product != null)
+                                        {
+                                            <li class="cart-item-row">
+                                                @((counter++).ToString("D2")). @item.product.name <strong class="product-quantity">x @item.quantity</strong>
+                                                <span>$ @((item.product.price * item.quantity).ToString("F2"))</span>
+                                            </li>
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    <li>No products in cart</li>
+                                }
+                            </ul>
+                        </div>
+                        <div class="checkout__order__total">
+                            <ul>
+                                <li>Total <span id="checkout-total-price">$ @totalOrderPrice.ToString("F2")</span></li>
+                            </ul>
+                        </div>
+
+                        <fieldset class="checkout__order__widget" role="radiogroup" aria-labelledby="payment-method-label" style="border:none; padding:0;">
+                            <legend id="payment-method-label" class="visually-hidden">Select Payment Method</legend>
+                            <p class="payment-label" style="font-weight:600; margin-bottom:10px;">Payment Method <span aria-hidden="true">*</span></p>
+
+                            <div class="payment-methods-grid">
+
+                                <label for="credit-card" class="payment-card-option active" onclick="selectPaymentCard(this)">
+                                    <input type="radio" id="credit-card" name="paymentMethod" value="credit-card" required aria-required="true" checked>
+                                    <div class="payment-card-content">
+                                        <div class="payment-card-item">
+                                            <div class="payment-card-left">
+                                                <div class="payment-icon-wrapper"><i class="fa-solid fa-credit-card"></i></div>
+                                                <div class="payment-text-info">
+                                                    <span class="payment-title">Credit / Debit Card</span>
+                                                    <span class="payment-subtitle">Visa, Mastercard, American Express</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="payment-check-mark"></div>
+                                </label>
+
+
+                                <label for="smart-wallet" class="payment-card-option" onclick="selectPaymentCard(this)">
+                                    <input type="radio" id="smart-wallet" name="paymentMethod" value="smart-wallet">
+                                    <div class="payment-card-content">
+                                        <div class="payment-card-item">
+                                            <div class="payment-card-left">
+                                                <div class="payment-icon-wrapper"><i class="fa-solid fa-wallet"></i></div>
+                                                <div class="payment-text-info">
+                                                    <span class="payment-title">Smart Wallet Cash</span>
+                                                    <span class="payment-subtitle">Vodafone, Orange, Etisalat Cash</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="payment-check-mark"></div>
+                                </label>
+
+
+                                <label for="paypal" class="payment-card-option" onclick="selectPaymentCard(this)">
+                                    <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                                    <div class="payment-card-content">
+                                        <div class="payment-card-item">
+                                            <div class="payment-card-left">
+                                                <div class="payment-icon-wrapper"><i class="fa-brands fa-paypal"></i></div>
+                                                <div class="payment-text-info">
+                                                    <span class="payment-title">PayPal Account</span>
+                                                    <span class="payment-subtitle">Pay securely via your PayPal account</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="payment-check-mark"></div>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div class="checkout__form__checkbox">
+                            <label for="terms-agree">
+                                <input type="checkbox" id="terms-agree" name="termsAgree" required aria-required="true">
+                                <span class="checkmark"></span>
+                                I have read and agree to the <a href="#" target="_blank">terms and conditions</a> <span aria-hidden="true">*</span>
+                            </label>
+                            <span class="error-message" id="terms-error" role="alert" aria-live="polite" style="color: #ca1515; display:block; font-size:13px; margin-top:5px;"></span>
+                        </div>
+                        <button type="submit" class="site-btn">Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<div id="modal-credit-card" class="payment-modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h4 style="font-weight:700; font-size:18px; color:#111827; margin-bottom:5px;">Card Details</h4>
+        <p style="font-size: 13px; color: #6b7280; margin-bottom:20px;">Secure payment of: <strong style="color:#ca1515;">$ @totalOrderPrice.ToString("F2")</strong></p>
+        <form id="form-cc">
+            <label style="font-weight:500; font-size:14px; color:#374151;">Cardholder Name</label>
+            <input type="text" id="cc-name" class="modal-input" placeholder="John Doe" required>
+            <span class="input-error" id="err-cc-name">Cardholder name is required.</span>
+
+            <label style="font-weight:500; font-size:14px; color:#374151;">Card Number</label>
+            <input type="text" id="cc-number" class="modal-input" placeholder="1234 5678 9101 1121" maxlength="19" required>
+            <span class="input-error" id="err-cc-number">Please enter a valid 16-digit card number.</span>
+
+            <div class="row">
+                <div class="col-6">
+                    <label style="font-weight:500; font-size:14px; color:#374151;">Expiry Date</label>
+                    <input type="text" id="cc-expiry" class="modal-input" placeholder="MM/YY" maxlength="5" required>
+                    <span class="input-error" id="err-cc-expiry">Use MM/YY format.</span>
+                </div>
+                <div class="col-6">
+                    <label style="font-weight:500; font-size:14px; color:#374151;">CVV</label>
+                    <input type="password" id="cc-cvv" class="modal-input" placeholder="123" maxlength="3" required>
+                    <span class="input-error" id="err-cc-cvv">Must be 3 digits.</span>
+                </div>
+            </div>
+            <button type="button" class="modal-btn" onclick="validateAndProcessPayment('credit-card')">Pay Securely</button>
+        </form>
+    </div>
+</div>
+
+
+<div id="modal-smart-wallet" class="payment-modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h4 style="font-weight:700; font-size:18px; color:#111827; margin-bottom:5px;">Smart Wallet Payment</h4>
+        <p style="font-size: 13px; color: #6b7280; margin-bottom:20px;">Amount to deduct: <strong style="color:#ca1515;">$ @totalOrderPrice.ToString("F2")</strong></p>
+        <form id="form-wallet">
+            <label style="font-weight:500; font-size:14px; color:#374151;">Select Wallet Provider</label>
+            <select id="wallet-provider" class="modal-input" required>
+                <option value="vodafone">Vodafone Cash</option>
+                <option value="orange">Orange Money</option>
+                <option value="etisalat">Etisalat Cash</option>
+                <option value="we">We Pay</option>
+            </select>
+
+            <label style="font-weight:500; font-size:14px; color:#374151;">Wallet Mobile Number</label>
+            <input type="text" id="wallet-phone" class="modal-input" placeholder="01xxxxxxxxx" maxlength="11" required>
+            <span class="input-error" id="err-wallet-phone">Enter a valid 11-digit mobile number starting with 01.</span>
+
+            <label style="font-weight:500; font-size:14px; color:#374151;">Wallet PIN</label>
+            <input type="password" id="wallet-pin" class="modal-input" placeholder="6-digit PIN" maxlength="6" required>
+            <span class="input-error" id="err-wallet-pin">Please enter your 6-digit wallet secure PIN.</span>
+
+            <button type="button" class="modal-btn" onclick="validateAndProcessPayment('smart-wallet')">Process Payment</button>
+        </form>
+    </div>
+</div>
+
+
+<div id="modal-paypal" class="payment-modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h4 style="font-weight:700; font-size:18px; color:#003087; margin-bottom:5px;"><i class="fa-brands fa-paypal"></i> PayPal Checkout</h4>
+        <p style="font-size: 13px; color: #6b7280; margin-bottom:20px;">Total amount: <strong style="color:#003087;">$ @totalOrderPrice.ToString("F2")</strong></p>
+        <form id="form-paypal">
+            <label style="font-weight:500; font-size:14px; color:#374151;">PayPal Email Address</label>
+            <input type="email" id="paypal-email" class="modal-input" placeholder="example@domain.com" required>
+            <span class="input-error" id="err-paypal-email">Please enter a valid PayPal email address.</span>
+
+            <label style="font-weight:500; font-size:14px; color:#374151;">PayPal Password</label>
+            <input type="password" id="paypal-password" class="modal-input" placeholder="Password" required>
+            <span class="input-error" id="err-paypal-password">Password field cannot be empty.</span>
+
+            <button type="button" class="modal-btn" style="background-color: #0070ba;" onclick="validateAndProcessPayment('paypal')">Log In & Pay Now</button>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    function selectPaymentCard(element) {
+        document.querySelectorAll('.payment-card-option').forEach(card => {
+            card.classList.remove('active');
+        });
+        element.classList.add('active');
+        const radioBtn = element.querySelector('input[type="radio"]');
+        if(radioBtn) radioBtn.checked = true;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const checkoutForm = document.getElementById('checkout-form');
+        const modals = document.querySelectorAll('.payment-modal');
+        const closeButtons = document.querySelectorAll('.close-modal');
+
+        closeButtons.forEach(btn => {
+            btn.onclick = function() {
+                modals.forEach(modal => modal.style.display = "none");
+            }
+        });
+
+        window.onclick = function(event) {
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+
+        checkoutForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const country = document.getElementById('country').value;
+            const city = document.getElementById('city').value;
+            const street = document.getElementById('address-street').value;
+            const terms = document.getElementById('terms-agree').checked;
+            const termsError = document.getElementById('terms-error');
+
+            if (!country || !city || !street) {
+                showToastNotification("Please fill in all required billing details fields first.", "#ca1515");
+                return;
+            }
+
+            if (!terms) {
+                termsError.textContent = "You must agree to the terms and conditions to proceed.";
+                return;
+            } else {
+                termsError.textContent = "";
+            }
+
+            const selectedMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+            document.getElementById(`modal-${selectedMethod}`).style.display = "block";
+        });
+    });
+
+    function showToastNotification(message, backgroundColor = "#10b981") {
+        const toastBox = document.getElementById('toast-box');
+        const toastMsg = document.getElementById('toast-message');
+        const toastInner = toastBox.querySelector('.custom-toast');
+
+        toastInner.style.backgroundColor = backgroundColor;
+        toastMsg.textContent = message;
+        toastBox.style.display = "block";
+
+        setTimeout(() => {
+            toastBox.style.display = "none";
+        }, 4000);
+    }
+
+    function validateAndProcessPayment(method) {
+        document.querySelectorAll('.input-error').forEach(el => el.style.display = 'none');
+        let isValid = true;
+
+        if (method === 'credit-card') {
+            const name = document.getElementById('cc-name').value.trim();
+            const number = document.getElementById('cc-number').value.replace(/\s/g, '');
+            const expiry = document.getElementById('cc-expiry').value.trim();
+            const cvv = document.getElementById('cc-cvv').value.trim();
+
+            if (!name) { document.getElementById('err-cc-name').style.display = 'block'; isValid = false; }
+            if (number.length !== 16 || isNaN(number)) { document.getElementById('err-cc-number').style.display = 'block'; isValid = false; }
+            if (!/^\d{2}\/\d{2}$/.test(expiry)) { document.getElementById('err-cc-expiry').style.display = 'block'; isValid = false; }
+            if (cvv.length !== 3 || isNaN(cvv)) { document.getElementById('err-cc-cvv').style.display = 'block'; isValid = false; }
+
+        } else if (method === 'smart-wallet') {
+            const phone = document.getElementById('wallet-phone').value.trim();
+            const pin = document.getElementById('wallet-pin').value.trim();
+
+            if (phone.length !== 11 || !phone.startsWith('01') || isNaN(phone)) {
+                document.getElementById('err-wallet-phone').style.display = 'block';
+                isValid = false;
+            }
+            if (pin.length !== 6 || isNaN(pin)) { document.getElementById('err-wallet-pin').style.display = 'block'; isValid = false; }
+
+        } else if (method === 'paypal') {
+            const email = document.getElementById('paypal-email').value.trim();
+            const password = document.getElementById('paypal-password').value.trim();
+            const emailReg = /^[^\s@@]+@@[^\s@@]+\.[^\s@@]+$/;
+
+            if (!emailReg.test(email)) { document.getElementById('err-paypal-email').style.display = 'block'; isValid = false; }
+            if (!password) { document.getElementById('err-paypal-password').style.display = 'block'; isValid = false; }
+        }
+
+        if (isValid) {
+
+            showToastNotification("Payment Successful! Your transaction has been processed.", "#10b981");
+
+            document.querySelectorAll('.payment-modal').forEach(modal => modal.style.display = "none");
+
+            setTimeout(() => {
+                clearCartUiAndRedirect();
+            }, 2500);
+        }
+    }
+
+    function clearCartUiAndRedirect() {
+        const productsList = document.getElementById('checkout-products-list');
+        if (productsList) {
+
+            document.querySelectorAll('.cart-item-row').forEach(row => row.remove());
+
+            const emptyLi = document.createElement('li');
+            emptyLi.textContent = "No products in cart";
+            productsList.appendChild(emptyLi);
+        }
+
+        const totalPriceEl = document.getElementById('checkout-total-price');
+        if (totalPriceEl) totalPriceEl.textContent = "$ 0.00";
+
+        fetch('/shop_cart/ClearCart', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
+        }).catch(err => console.log("Backend clear request ignored or not implemented yet."));
+
+
+        window.location.href = window.location.origin + "/";
+    }
+</script>

@@ -1,0 +1,69 @@
+@model List<project_MVC.Models.Category>
+@{
+    ViewData["Title"] = "Manage Categories";
+    ViewData["ActivePage"] = "Categories";
+    Layout = "~/Views/Shared/admin/_adminlayout.cshtml";
+}
+
+<section class="content-section active">
+    <div class="section-header flex-between">
+        <div>
+            <h1>Manage Categories</h1>
+            <p>View and manage product categories</p>
+        </div>
+        <a href="/admin/categories/create" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add Category</a>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            @if (TempData["Error"] != null)
+            {
+                <div style="background:#f8d7da; color:#721c24; padding:10px; margin-bottom:15px; border-radius:5px;">
+                    <strong>&#9888; Error:</strong> @TempData["Error"]
+                </div>
+            }
+            @if (TempData["Success"] != null)
+            {
+                <div style="background:#d4edda; color:#155724; padding:10px; margin-bottom:15px; border-radius:5px;">
+                    <strong>&#10004; Success:</strong> @TempData["Success"]
+                </div>
+            }
+
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var cat in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(cat.image_url))
+                                    {
+                                        <img src="@cat.image_url" alt="@cat.name" style="width:55px; height:55px; object-fit:cover; border-radius:8px; border:1px solid #ddd;" onerror="this.src='/img/categories/category-1.jpg.webp'" />
+                                    }
+                                    else
+                                    {
+                                        <div style="width:55px; height:55px; background:#f0f0f0; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:24px;">📦</div>
+                                    }
+                                </td>
+                                <td>#@cat.id</td>
+                                <td><strong>@cat.name</strong></td>
+                                <td style="display: flex; gap: 5px;">
+                                    <a href="/admin/categories/details/@cat.id" class="btn-icon btn-info" style="margin-right: 5px; color: white; background: #17a2b8; padding: 8px; border-radius: 4px; text-decoration: none;"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="/admin/categories/edit/@cat.id" class="btn-icon btn-edit"><i class="fa-solid fa-pen"></i></a>
+                                    <a href="/admin/categories/delete/@cat.id" class="btn-icon btn-delete" style="margin-right: 5px; color: white; background: #ff4d4d; padding: 8px; border-radius: 4px; text-decoration: none;"><i class="fa-solid fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
